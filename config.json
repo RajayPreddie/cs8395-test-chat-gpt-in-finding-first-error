@@ -1,0 +1,7 @@
+{
+  "name": "Test ChatGPT in Finding the First Error",
+  "model": "gpt-4",
+  "run_test": "python main.py",
+  "run_score": "",
+  "tags": []
+}
