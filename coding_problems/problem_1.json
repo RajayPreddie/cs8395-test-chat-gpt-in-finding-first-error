@@ -1,0 +1,10 @@
+{
+    "id": "problem_1",
+    "description": "\n\nWhen attempting to discard an item from a list, the NotImplementedError is triggered, indicating that the discard function has not been implemented yet.",
+    "code": "list_items = [1,2,3]\nlist_items.discard(2)\n\n# This will trigger a NotImplementedError, indicating that the discard function has not been implemented yet.",
+    "tags": [
+        "NotImplementedError",
+        "discard",
+        "Easy"
+    ]
+}

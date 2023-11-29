@@ -1,0 +1,10 @@
+{
+    "id": "problem_4",
+    "description": "\n\nWhen attempting to create a VirtualEnvironment, a ValueError is raised indicating that the environment name is not valid.",
+    "code": "# Create a Virtual Environment \nimport os\nimport virtualenv\n\n# Create a directory for the virtual environment\nvirtualenv_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'venv')",
+    "tags": [
+        "ValueError",
+        "VirtualEnvironment",
+        "Easy"
+    ]
+}

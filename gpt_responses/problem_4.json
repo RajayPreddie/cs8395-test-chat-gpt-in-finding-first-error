@@ -1,0 +1,10 @@
+{
+    "id": "problem_4",
+    "description": "\n\nWhen attempting to create a VirtualEnvironment, a ValueError is raised indicating that the environment name is not valid.",
+    "output": "NameError: name '__file__' is not defined",
+    "tags": [
+        "ValueError",
+        "VirtualEnvironment",
+        "Easy"
+    ]
+}

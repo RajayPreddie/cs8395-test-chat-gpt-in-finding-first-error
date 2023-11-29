@@ -1,0 +1,10 @@
+{
+    "id": "problem_3",
+    "description": "\n\nThe program is throwing an OSError when attempting to capitalize a string. The OSError states that the file or directory specified does not exist or is inaccessible. The program is unable to capitalize the string as the file or directory needed to complete the task is missing or inaccessible.",
+    "code": "# Program that throws an OSError\n\nimport os\n\nstring = 'hello world'\n\ntry:\n    os.access(string, os.R_OK)\n    print(string.capitalize())\nexcept OSError:\n    print",
+    "tags": [
+        "OSError",
+        "capitalize",
+        "Easy"
+    ]
+}

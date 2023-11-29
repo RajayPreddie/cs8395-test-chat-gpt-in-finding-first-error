@@ -1,0 +1,10 @@
+{
+    "id": "problem_3",
+    "description": "\n\nThe program is throwing an OSError when attempting to capitalize a string. The OSError states that the file or directory specified does not exist or is inaccessible. The program is unable to capitalize the string as the file or directory needed to complete the task is missing or inaccessible.",
+    "output": "hello world",
+    "tags": [
+        "OSError",
+        "capitalize",
+        "Easy"
+    ]
+}

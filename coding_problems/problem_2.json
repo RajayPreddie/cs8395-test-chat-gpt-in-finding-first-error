@@ -1,0 +1,10 @@
+{
+    "id": "problem_2",
+    "description": "\n\nWhen trying to use TypeHinting in a Python application, an OSError is raised with the message \"TypeError: 'TypeHinting' is not supported by this platform.\" This indicates that the platform does not have the necessary libraries installed to support TypeHinting",
+    "code": "def add_two_numbers(a: int, b: int) -> int:\n    \"\"\"This function adds two numbers and returns the result.\n    \n    Parameters\n    ----------\n    a : int\n        The first number to add\n    b : int",
+    "tags": [
+        "OSError",
+        "TypeHinting",
+        "Easy"
+    ]
+}

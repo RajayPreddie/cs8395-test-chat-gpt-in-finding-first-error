@@ -1,0 +1,31 @@
+{
+    "name": "Python Execution Output Comparison: Total Score",
+    "tags": [],
+    "output": 57.69887359017794,
+    "difflib_overall_score": 48.39774718035588,
+    "chatgpt_overall_score": 67.0,
+    "difflib_scores": {
+        "NotImplementedError": 98.46153846153847,
+        "discard": 98.46153846153847,
+        "Easy": 48.39774718035588,
+        "ValueError": 23.03030303030303,
+        "VirtualEnvironment": 23.03030303030303,
+        "OverflowError": 0.0,
+        "re": 0.0,
+        "OSError": 60.24844720496895,
+        "TypeHinting": 33.54037267080746,
+        "capitalize": 86.95652173913044
+    },
+    "chatgpt_scores": {
+        "NotImplementedError": 95.0,
+        "discard": 95.0,
+        "Easy": 67.0,
+        "ValueError": 60.0,
+        "VirtualEnvironment": 60.0,
+        "OverflowError": 0.0,
+        "re": 0.0,
+        "OSError": 90.0,
+        "TypeHinting": 80.0,
+        "capitalize": 100.0
+    }
+}
