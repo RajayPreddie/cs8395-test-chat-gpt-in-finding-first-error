@@ -1,0 +1,9 @@
+{
+    "id": "problem_25",
+    "code": "\ndef memoize(f):\n    memo = {}\n    def helper(x):\n        if x not in memo:            \n            memo[x] = f(x)\n        return memo[x]\n    return helper\n\n@memoize\ndef fibonacci(n):\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        return fibonacci(n-1) + fibonacci(n-2)\n\n# Calculate the first 10 Fibonacci numbers\nfibonacci_numbers = [fibonacci(n) for n in range(10)]\nprint(fibonacci_numbers)\n",
+    "output": "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]",
+    "tags": [
+        "Memoization",
+        "Easy"
+    ]
+}

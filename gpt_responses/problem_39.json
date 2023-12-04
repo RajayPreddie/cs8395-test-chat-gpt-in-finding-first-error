@@ -1,0 +1,9 @@
+{
+    "id": "problem_39",
+    "code": "\ndef calculate_average(values: list) -> float:\n    # This function calculates the average of a list of numbers\n    total = sum(values)\n    count = len(values)\n    average = total / count\n    return average\n\ndef display_result(numbers: list):\n    # This function displays the result of the average calculation\n    avg = calculate_average(numbers)\n    print(f\"The average of the numbers is: {avg}\")\n\ndef main():\n    # Main function to demonstrate the functionality\n    sample_data = [10, 20, 30, 40, 50]\n    display_result(sample_data)\n\n    # Let's try with a different set of numbers\n    more_data = [5, 15, 25, 35, 45]\n    display_result(more_data)\n\n# Call the main function\nmain()\n",
+    "output": "The average of the numbers is: 30.0\nThe average of the numbers is: 25.0",
+    "tags": [
+        "TypeHinting",
+        "Easy"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "id": "problem_11",
+    "code": "\ndef debug_info(func):\n    \"\"\"A decorator that prints the name and docstring of the function.\"\"\"\n    def wrapper(*args, **kwargs):\n        print(f\"Function name: {func.__name__}\")\n        print(f\"Docstring: {func.__doc__}\")\n        return func(*args, **kwargs)\n    return wrapper\n\n@debug_info\ndef add_numbers(a, b):\n    \"\"\"Adds two numbers together.\"\"\"\n    return a + b\n\n@debug_info\ndef multiply_numbers(a, b):\n    \"\"\"Multiplies two numbers together.\"\"\"\n    return a * b\n\n# Calculate the sum of 1 and 2\nresult_add = add_numbers(1, 2)\nprint(f\"The sum of 1 and 2 is {result_add}\")\n\n# Calculate the product of 4 and 5\nresult_multiply = multiply_numbers(4, 5)\nprint(f\"The product of 4 and 5 is {result_multiply}\")\n\n# Intentional error: Trying to concatenate string and integer\nprint(\"The sum of 1 and 2 is \" + result_add)\n",
+    "output": "Function name: add_numbers\nDocstring: Adds two numbers together.\nThe sum of 1 and 2 is 3\nFunction name: multiply_numbers\nDocstring: Multiplies two numbers together.\nThe product of 4 and 5 is 20\nTraceback (most recent call last",
+    "tags": [
+        "Decorator",
+        "Easy"
+    ]
+}

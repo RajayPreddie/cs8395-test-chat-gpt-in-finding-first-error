@@ -1,0 +1,12 @@
+Current application settings:
+theme: light
+language: en
+notifications_enabled: True
+Setting 'theme' updated to 'dark'
+Setting 'language' updated to 'es'
+Setting 'notifications_enabled' updated to 'False'
+
+Updated application settings:
+theme: dark
+language: es
+notifications_enabled: False

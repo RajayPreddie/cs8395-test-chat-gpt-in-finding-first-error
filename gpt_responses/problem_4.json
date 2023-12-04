@@ -1,10 +1,9 @@
 {
     "id": "problem_4",
-    "description": "\n\nWhen attempting to create a VirtualEnvironment, a ValueError is raised indicating that the environment name is not valid.",
-    "output": "NameError: name '__file__' is not defined",
+    "code": "\ndef convert_string_to_bytes(string_data):\n    # This function converts a string to its bytes representation\n    return bytes(string_data, 'utf-8')\n\ndef save_bytes_to_file(byte_data, file_name):\n    # Saves the bytes data to a file\n    with open(file_name, 'wb') as file:\n        file.write(byte_data)\n\ndef read_bytes_from_file(file_name):\n    # Reads bytes from a file\n    with open(file_name, 'rb') as file:\n        return file.read()\n\ndef main():\n    # Convert string to bytes and save to file\n    original_string = \"Hello, world!\"\n    byte_data = convert_string_to_bytes(original_string)\n    save_bytes_to_file(byte_data, 'output.txt')\n\n    # Read bytes from file and print\n    read_data = read_bytes_from_file('output.txt')\n    print(read_data)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "output": "b'Hello, world!'",
     "tags": [
-        "ValueError",
-        "VirtualEnvironment",
+        "bytes",
         "Easy"
     ]
 }

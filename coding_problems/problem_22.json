@@ -1,0 +1,13 @@
+{
+    "id": "problem_22",
+    "code": "\ndef analyze_object(obj):\n    # Display the attributes and methods of an object\n    attributes = dir(obj)\n    print(f\"The object has the following attributes and methods: {attributes}\")\n\n    # Check if the object is callable\n    if callable(obj):\n        print(f\"The object {obj} is callable.\")\n    else:\n        print(f\"The object {obj} is not callable.\")\n\n    # Count the number of public methods\n    public_methods = [method for method in attributes if callable(getattr(obj, method)) and not method.startswith('_')]\n    print(f\"The object has {len(public_methods)} public methods.\")\n\nclass IntrospectionDemo:\n    def __init__(self, name):\n        self.name = name\n\n    def greet(self):\n        print(f\"Hello, my name is {self.name}.\")\n\n# Create an instance of IntrospectionDemo\ndemo_object = IntrospectionDemo(\"Alice\")\n\n# Analyze the demo_object using our function\nanalyze_object(demo_object)\n\n# Introduce an error by trying to call a non-existing method\ndemo_object.fly()\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: Introspection. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "Introspection",
+        "Easy"
+    ],
+    "keywords": [
+        "Introspection"
+    ],
+    "difficulty": "Easy"
+}

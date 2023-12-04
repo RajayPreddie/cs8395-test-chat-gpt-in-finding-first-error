@@ -67,7 +67,7 @@ def prompt_chat_gpt(problem_descriptions):
     full_path = os.path.join(abs_directory_path, filename)
     # Create a JSON object to store the prompt solution
     prompt_solution =  {"id": problem_id, 
-        "description": problem_description['description'], 
+        "code": problem_description['code'], 
         "output": response.choices[0].message.content,
         "tags": problem_description['tags'],
                               }
@@ -155,11 +155,11 @@ def execute_python_code_from_directory(problem_descriptions, gpt_responses):
 
 # Set up argument parsing
 parser = argparse.ArgumentParser(description='Get ChatGPT responses and write to files.')
-parser.add_argument('--regenerate', action='store_true',
-                    help='Force regeneration of ChatGPT responses')
-# TODO: if regenerate is on then regenerate everything 
+parser.add_argument('--generate_responses', action='store_true',
+                    help='Force generation of ChatGPT responses')
+# TODO: if generate is on then generate everything 
 # Check if gpt responses exist
-# TODO: if no regenerate then check if the directory exists and if it does then don't regenerate
+# TODO: if no generate then check if the directory exists and if it does then don't regenerate
 # Check if json_problem_scores exists
 args = parser.parse_args()
 
@@ -178,7 +178,7 @@ folder_exists = os.path.exists(response_folder)
 abs_directory_path = os.path.join(os.getcwd(), response_folder)
 # If the path already exists, then there is no need to reprompt ChatGPT
 gpt_responses = {}
-if not os.path.exists(abs_directory_path) or args.regenerate:
+if not os.path.exists(abs_directory_path) or args.generate_responses:
     if not os.path.exists(abs_directory_path):
       os.makedirs(abs_directory_path)
     gpt_responses = prompt_chat_gpt(problem_descriptions)

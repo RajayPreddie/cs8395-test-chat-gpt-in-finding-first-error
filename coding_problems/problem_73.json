@@ -1,0 +1,15 @@
+{
+    "id": "problem_73",
+    "code": "\nimport numpy as np\nimport os\n\ndef calculate_file_statistics(file_path):\n    try:\n        # Load data from a text file assuming numeric data separated by new lines\n        data = np.loadtxt(file_path)\n\n        # Calculate statistics\n        mean_val = np.mean(data)\n        median_val = np.median(data)\n        std_dev_val = np.std(data)\n\n        # Print statistics\n        print(f\"Mean: {mean_val}\")\n        print(f\"Median: {median_val}\")\n        print(f\"Standard Deviation: {std_dev_val}\")\n\n    except IOError:\n        print(\"Error: File not found or could not be read.\")\n\ndef list_directory_contents(directory_path):\n    # List all files and directories in the specified path\n    contents = os.listdir(directory_path)\n    print(\"Directory contents:\")\n    for item in contents:\n        print(item)\n\n# Main function to demonstrate the functionality\ndef main():\n    test_file_path = \"data.txt\"\n    test_directory_path = \"some_directory\"\n\n    # Calculate statistics for a given file\n    calculate_file_statistics(test_file_path)\n\n    # List contents of a given directory\n    list_directory_contents(test_directory_path)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: numpy,os. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "numpy",
+        "os",
+        "Medium"
+    ],
+    "keywords": [
+        "numpy",
+        "os"
+    ],
+    "difficulty": "Medium"
+}

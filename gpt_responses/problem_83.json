@@ -1,0 +1,11 @@
+{
+    "id": "problem_83",
+    "code": "\nimport requests\nfrom scipy.spatial import distance\n\n# Function to get JSON data from a mock API\ndef get_data_from_api():\n    response = requests.get('https://jsonplaceholder.typicode.com/users')\n    return response.json()\n\n# Function to calculate the reverse of Euclidean distance between two points\ndef reverse_euclidean_distance(point1, point2):\n    dist = distance.euclidean(point1, point2)\n    if dist == 0:\n        return float('inf')  # Avoid division by zero\n    return 1 / dist\n\n# Main function to process data\ndef process_user_locations():\n    users = get_data_from_api()\n    user_locations = [(user['address']['geo']['lat'], user['address']['geo']['lng']) for user in users]\n\n    # Calculate the reverse Euclidean distance between the first two users\n    point1 = user_locations[0]\n    point2 = user_locations[1]\n    reverse_dist = reverse_euclidean_distance(point1, point2)\n    print(f\"The reverse Euclidean distance between user 1 and user 2 is: {reverse_dist}\")\n\n# Run the main function\nprocess_user_locations()\n",
+    "output": "requests.exceptions.MissingSchema: Invalid URL 'https://jsonplaceholder.typicode.com/users': No schema supplied. Perhaps you meant http://https://jsonplaceholder.typicode.com/users?",
+    "tags": [
+        "requests",
+        "reverse",
+        "scipy",
+        "Hard"
+    ]
+}

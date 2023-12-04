@@ -1,0 +1,10 @@
+{
+    "id": "problem_67",
+    "code": "\nimport json\n\n# Define a function to extract keys from a JSON object and print them\ndef print_json_keys(json_data):\n    try:\n        keys = json_data.keys()\n        print(\"JSON keys:\", keys)\n    except AttributeError:\n        print(\"The provided data is not a valid JSON object.\")\n\n# Define a function to add a new key-value pair to a JSON object\ndef add_key_value(json_data, key, value):\n    json_data[key] = value\n    return json_data\n\n# Sample JSON data\ndata = '{\"name\": \"Alice\", \"age\": 30, \"city\": \"New York\"}'\n\n# Convert JSON string to Python dictionary\ndata_dict = json.loads(data)\n\n# Print keys of the JSON data\nprint_json_keys(data_dict)\n\n# Add a new key-value pair to the JSON data\nupdated_data = add_key_value(data_dict, \"email\", \"alice@example.com\")\n\n# Convert the updated dictionary back to a JSON string\nupdated_json_data = json.dumps(updated_data)\n\n# Intentionally introduce an error by trying to print keys from a string instead of a dictionary\nprint_json_keys(updated_json_data)\n",
+    "output": "JSON keys: dict_keys(['name', 'age', 'city'])\nThe provided data is not a valid JSON object.",
+    "tags": [
+        "json",
+        "keys",
+        "Medium"
+    ]
+}

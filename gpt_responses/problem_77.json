@@ -1,0 +1,10 @@
+{
+    "id": "problem_77",
+    "code": "\nimport torch\n\n# Define a simple neural network using PyTorch\nclass SimpleNet(torch.nn.Module):\n    def __init__(self):\n        super(SimpleNet, self).__init__()\n        self.fc1 = torch.nn.Linear(10, 5)\n        self.fc2 = torch.nn.Linear(5, 2)\n\n    def forward(self, x):\n        x = torch.relu(self.fc1(x))\n        x = torch.relu(self.fc2(x))\n        return x\n\n# Initialize the network\nnet = SimpleNet()\n\n# Dummy input tensor\ninput_tensor = torch.randn(1, 10)\n\n# Forward pass through the network\noutput = net(input_tensor)\n\n# Let's say we want to keep track of some configuration parameters\n# in a dictionary and we use popitem to retrieve and remove an item\nconfig = {\n    'learning_rate': 0.01,\n    'batch_size': 32,\n    'momentum': 0.9\n}\n\n# Function to get and remove the last configuration item\ndef get_and_remove_last_config_item():\n    key, value = config.popitem()\n    print(f\"Removed config item: {key} with value {value}\")\n\n# Simulate removing all configuration items\nwhile len(config) > 0:\n    get_and_remove_last_config_item()\n\n# Here's the intentional error: We call the function once more\n# even though the dictionary is already empty, which will raise a KeyError\nget_and_remove_last_config_item()\n",
+    "output": "Removed config item: momentum with value 0.9\nRemoved config item: batch_size with value 32\nRemoved config item: learning_rate with value 0.01\nTraceback (most recent call last):\n  File \"<stdin>\", line 39, in <module>\n  File \"<",
+    "tags": [
+        "popitem",
+        "pytorch",
+        "Medium"
+    ]
+}

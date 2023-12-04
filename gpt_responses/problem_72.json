@@ -1,0 +1,10 @@
+{
+    "id": "problem_72",
+    "code": "\nimport numpy as np\nfrom multiprocessing import Process\n\ndef compute_inverse(matrix):\n    # This function computes the inverse of a given matrix\n    try:\n        inv_matrix = np.linalg.inv(matrix)\n        print(\"The inverse of the matrix is:\")\n        print(inv_matrix)\n    except np.linalg.LinAlgError:\n        print(\"Matrix is singular and cannot be inverted.\")\n\ndef worker(matrix):\n    # Worker function for multiprocessing\n    compute_inverse(matrix)\n\nif __name__ == \"__main__\":\n    # Define a matrix using numpy\n    matrix = np.array([[1, 2], [3, 4]])\n\n    # Creating a process to compute the inverse of the matrix\n    process = Process(target=worker, args=(matrix,))\n    process.start()\n    process.join()\n\n    # Intentionally calling the function with incorrect arguments\n    # This should print an error message\n    compute_inverse(\"This is not a matrix\")\n",
+    "output": "The inverse of the matrix is:\n[[-2.   1. ]\n [ 1.5 -0.5]]\nMatrix is singular and cannot be inverted.",
+    "tags": [
+        "multiprocessing",
+        "numpy",
+        "Medium"
+    ]
+}

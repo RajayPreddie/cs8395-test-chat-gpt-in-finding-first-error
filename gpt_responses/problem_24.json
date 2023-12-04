@@ -1,0 +1,9 @@
+{
+    "id": "problem_24",
+    "code": "\ndef calculate_tax(price, tax_rate):\n    # A simple lambda function to calculate the tax on a given price\n    tax_calculator = lambda p, r: p * r\n    return tax_calculator(price, tax_rate)\n\ndef apply_discount(price, discount):\n    # Applies a discount to the price\n    discounted_price = price - (price * discount)\n    return discounted_price\n\n# A list of product prices\nproduct_prices = [19.99, 45.50, 109.99, 234.89]\n\n# A tax rate\ntax_rate = 0.07\n\n# Applying tax to each product\ntaxed_prices = list(map(lambda price: calculate_tax(price, tax_rate), product_prices))\n\n# A discount rate\ndiscount_rate = 0.1\n\n# Applying discount to each taxed price\nfinal_prices = list(map(lambda price: apply_discount(price, discount_rate), taxed_prices))\n\n# Printing final prices\nfor price in final_prices:\n    print(f\"Final price: {price}\")\n\n# An intentional error: the 'calculate_tax' function is missing a parameter\n# This will cause a TypeError when the lambda tries to call it\ncalculate_tax_error = lambda price: calculate_tax(price)\nprint(calculate_tax_error(100))\n",
+    "output": "Final price: 18.8913\nFinal price: 43.065\nFinal price: 104.3913\nFinal price: 222.64410000000002\nTraceback (most recent call last):\n  File \"<stdin>\", line 30, in <module>\nTypeError",
+    "tags": [
+        "Lambda",
+        "Easy"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "id": "problem_35",
+    "code": "\nimport json\n\n# Define a simple class to represent a user\nclass User:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    # Method to serialize the user object to JSON\n    def to_json(self):\n        return json.dumps(self.__dict__)\n\n    # Method to create a User object from a JSON string\n    @staticmethod\n    def from_json(json_str):\n        data = json.loads(json_str)\n        return User(data['name'], data['age'])\n\n# Create a new user object\nuser = User(\"John Doe\", 30)\n\n# Serialize the user object to JSON\nuser_json = user.to_json()\n\n# Print the serialized user\nprint(\"Serialized user:\", user_json)\n\n# Deserialize the JSON back to a User object\nnew_user = User.from_json(user_json)\n\n# Print the deserialized user's details\nprint(\"Deserialized user:\", new_user.name, new_user.age)\n\n# Intentional Error: Attempt to serialize a non-serializable object (set)\ndef serialize_set():\n    sample_set = {1, 2, 3}\n    return json.dumps(sample_set)\n\n# Call the function that causes an error\nserialize_set()\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: Serialization. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "Serialization",
+        "Easy"
+    ],
+    "keywords": [
+        "Serialization"
+    ],
+    "difficulty": "Easy"
+}

@@ -1,0 +1,17 @@
+{
+    "id": "problem_90",
+    "code": "\ndef extract_command(input_string):\n    \"\"\"\n    This function takes an input string and extracts the command by stripping\n    whitespace and checking if it starts with a specific keyword.\n    \"\"\"\n    command = input_string.strip()\n    if command.startswith('run:'):\n        return command.split(':')[1]\n    else:\n        return \"No command found.\"\n\ndef process_commands(commands):\n    \"\"\"\n    Processes a list of command strings, extracting and executing each command.\n    \"\"\"\n    for cmd in commands:\n        extracted_command = extract_command(cmd)\n        if extracted_command != \"No command found.\":\n            execute_command(extracted_command)\n\ndef execute_command(command):\n    \"\"\"\n    Executes a given command. This is a placeholder for actual command execution logic.\n    \"\"\"\n    print(f\"Executing: {command}\")\n    if command == \"exit\":\n        exit_program()\n\ndef exit_program():\n    \"\"\"\n    Exits the program. Intentionally contains an error to demonstrate exception handling.\n    \"\"\"\n    # Intentional error: 'exit' function is not defined, it should be 'exit()'\n    exit\n\n# Example commands list\ncommands_list = [\n    \"   run:print('Hello, World!')   \",\n    \"run:exit\",\n    \"echo 'This should not run'\"\n]\n\n# Process the example commands\nprocess_commands(commands_list)\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: split,startswith,strip. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "split",
+        "startswith",
+        "strip",
+        "Hard"
+    ],
+    "keywords": [
+        "split",
+        "startswith",
+        "strip"
+    ],
+    "difficulty": "Hard"
+}

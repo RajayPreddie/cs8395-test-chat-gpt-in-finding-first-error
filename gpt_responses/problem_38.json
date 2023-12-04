@@ -1,0 +1,9 @@
+{
+    "id": "problem_38",
+    "code": "\ndef calculate_average(values):\n    # This function calculates the average of the values in a tuple\n    total = sum(values)\n    count = len(values)\n    average = total / count\n    return average\n\ndef tuple_operations(tup):\n    # This function performs various operations on a tuple\n    print(\"Original tuple:\", tup)\n    \n    # Calculate the average of the tuple values\n    avg = calculate_average(tup)\n    print(\"Average of tuple values:\", avg)\n    \n    # Find the maximum and minimum values in the tuple\n    max_value = max(tup)\n    min_value = min(tup)\n    print(\"Maximum value in tuple:\", max_value)\n    print(\"Minimum value in tuple:\", min_value)\n    \n    # Multiply each element by the average and return a new tuple\n    multiplied_tuple = tuple(value * avg for value in tup)\n    return multiplied_tuple\n\n# Example tuple of numbers\nnumbers = (4, 8, 15, 16, 23, 42)\n\n# Perform operations on the example tuple\nresult = tuple_operations(numbers)\nprint(\"Tuple after multiplication by average:\", result)\n",
+    "output": "Original tuple: (4, 8, 15, 16, 23, 42)\nAverage of tuple values: 18.0\nMaximum value in tuple: 42\nMinimum value in tuple: 4\nTuple after multiplication by average: (72.0, 144",
+    "tags": [
+        "tuple",
+        "Easy"
+    ]
+}

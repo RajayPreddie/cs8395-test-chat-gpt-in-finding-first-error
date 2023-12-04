@@ -1,0 +1,4 @@
+The letter 'a' appears in 'banana' 3 times.
+Letter 'b' appears 1 times.
+Letter 'a' appears 3 times.
+Letter 'n' appears 2 times.

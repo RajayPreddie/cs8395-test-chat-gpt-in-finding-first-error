@@ -1,1 +1,2 @@
-Hello world
+Original data: Hello, World!
+Transformed data: bytearray(b'\t$--.ma\x16.3-%`')

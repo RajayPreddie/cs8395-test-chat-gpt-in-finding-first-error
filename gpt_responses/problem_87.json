@@ -1,0 +1,11 @@
+{
+    "id": "problem_87",
+    "code": "\nimport socket\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\n\n# Load the Iris dataset\niris = load_iris()\nX, y = iris.data, iris.target\n\n# Split the dataset into training and testing sets\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\n# Initialize the K-Neighbors Classifier\nknn = KNeighborsClassifier(n_neighbors=5)\n\n# Train the classifier\nknn.fit(X_train, y_train)\n\n# Predict the labels for the test set\npredictions = knn.predict(X_test)\n\n# Print the accuracy of the classifier\naccuracy = knn.score(X_test, y_test)\nprint(f\"Model accuracy: {accuracy:.2%}\")\n\n# Create a socket object to demonstrate the use of 'socket' keyword\ns = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n# Define a function to sort the predictions and print them\ndef print_sorted_predictions(predictions):\n    sorted_predictions = sorted(predictions)\n    for i, pred in enumerate(sorted_predictions):\n        print(f\"Sorted prediction {i+1}: {pred}\")\n\n# Call the function to print sorted predictions\nprint_sorted_predictions(preditions)\n",
+    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 42, in <module>\nNameError: name 'preditions' is not defined",
+    "tags": [
+        "sklearn",
+        "socket",
+        "sort",
+        "Hard"
+    ]
+}

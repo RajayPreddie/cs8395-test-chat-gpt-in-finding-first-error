@@ -1,0 +1,15 @@
+{
+    "id": "problem_68",
+    "code": "\ndef get_lowercase_keys(input_dict):\n    \"\"\"\n    This function takes a dictionary and returns a new dictionary with all keys converted to lowercase.\n    \"\"\"\n    lowercase_dict = {}\n    for key, value in input_dict.items():\n        lowercase_key = key.lower()\n        lowercase_dict[lowercase_key] = value\n    return lowercase_dict\n\ndef main():\n    # Example dictionary with mixed case keys\n    sample_dict = {'Name': 'Alice', 'AGE': 25, 'Country': 'Wonderland'}\n    \n    # Convert all keys to lowercase\n    lowercase_dict = get_lowercase_keys(sample_dict)\n    \n    # Print the resulting dictionary\n    print(\"Dictionary with lowercase keys:\", lowercase_dict)\n\n# Call the main function\nmain()\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: keys,lower. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "keys",
+        "lower",
+        "Medium"
+    ],
+    "keywords": [
+        "keys",
+        "lower"
+    ],
+    "difficulty": "Medium"
+}

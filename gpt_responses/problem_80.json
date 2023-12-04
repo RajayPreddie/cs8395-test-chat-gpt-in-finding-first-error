@@ -1,0 +1,10 @@
+{
+    "id": "problem_80",
+    "code": "\nimport re\n\ndef remove_special_characters(text):\n    # This function removes special characters from a given string\n    return re.sub(r'[^a-zA-Z0-9 ]', '', text)\n\ndef main():\n    sample_text = \"This is a sample text with some special characters! @#$%^&*()\"\n    cleaned_text = remove_special_characters(sample_text)\n    print(f\"Original: {sample_text}\\nCleaned: {cleaned_text}\")\n\n# The following line will cause an error because the function is not called correctly\nmain(wrong_argument)\n",
+    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nTypeError: main() takes 0 positional arguments but 1 was given",
+    "tags": [
+        "re",
+        "remove",
+        "Medium"
+    ]
+}

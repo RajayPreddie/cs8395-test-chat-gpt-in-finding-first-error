@@ -1,4 +1,4 @@
-  File "<string>", line 8
-        b : int
-               ^
-SyntaxError: EOF while scanning triple-quoted string literal
+Processing data...
+Fetching data...
+Data fetched successfully.
+Processed data: 124

@@ -1,0 +1,17 @@
+{
+    "id": "problem_93",
+    "code": "\nimport subprocess\nimport sys\nimport tensorflow as tf\n\n# Define a function to check if TensorFlow is installed and its version\ndef check_tensorflow():\n    try:\n        tf_version = tf.__version__\n        print(f\"TensorFlow is installed. Version: {tf_version}\")\n    except ImportError:\n        print(\"TensorFlow is not installed.\")\n\n# Define a function to run a subprocess command and print its output\ndef run_command(command):\n    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)\n    print(f\"Command output: {result.stdout}\")\n\n# A function to multiply two matrices using TensorFlow\ndef matrix_multiply(matrix1, matrix2):\n    # Ensure that the matrices are TensorFlow tensors\n    tensor1 = tf.constant(matrix1)\n    tensor2 = tf.constant(matrix2)\n\n    # Perform matrix multiplication\n    result = tf.matmul(tensor1, tensor2)\n\n    # Return the result as a numpy array\n    return result.numpy()\n\n# Main function where the program starts executing\ndef main():\n    check_tensorflow()\n    \n    # Run a sample command to check Python version\n    run_command([sys.executable, '--version'])\n\n    # Example matrices to multiply\n    matrix_a = [[1, 2], [3, 4]]\n    matrix_b = [[5, 6], [7, 8]]\n\n    # Perform matrix multiplication\n    result_matrix = matrix_multiply(matrix_a, matrix_b)\n    print(f\"Result of matrix multiplication: {result_matrix}\")\n\n# Call the main function\nif __name__ == \"__main__\":\n    main()\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: subprocess,sys,tensorflow. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "subprocess",
+        "sys",
+        "tensorflow",
+        "Hard"
+    ],
+    "keywords": [
+        "subprocess",
+        "sys",
+        "tensorflow"
+    ],
+    "difficulty": "Hard"
+}

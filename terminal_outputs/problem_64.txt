@@ -1,0 +1,4 @@
+Full inventory contains all items from partial inventory: True
+Item: apples, Quantity: 50
+Item: bananas, Quantity: 30
+Item: oranges, Quantity: 20

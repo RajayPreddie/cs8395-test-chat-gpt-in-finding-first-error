@@ -1,0 +1,2 @@
+The result of the expression is: 18
+There was an error evaluating the expression: unexpected EOF while parsing (<string>, line 1)

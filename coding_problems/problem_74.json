@@ -1,0 +1,15 @@
+{
+    "id": "problem_74",
+    "code": "\nimport os\nimport pandas as pd\n\n# Function to list all CSV files in a given directory\ndef list_csv_files(directory):\n    csv_files = [f for f in os.listdir(directory) if f.endswith('.csv')]\n    return csv_files\n\n# Function to concatenate all CSV files into a single DataFrame\ndef concatenate_csv_files(files_list, directory):\n    data_frames = []\n    for file in files_list:\n        file_path = os.path.join(directory, file)\n        df = pd.read_csv(file_path)\n        data_frames.append(df)\n    concatenated_df = pd.concat(data_frames, ignore_index=True)\n    return concatenated_df\n\n# Function to save the concatenated DataFrame to a new CSV file\ndef save_concatenated_data(df, output_file):\n    df.to_csv(output_file, index=False)\n\n# Main program execution\nif __name__ == \"__main__\":\n    directory = 'data'  # Assume a directory named 'data' exists with CSV files\n    output_file = 'combined_data.csv'\n\n    csv_files = list_csv_files(directory)\n    concatenated_data = concatenate_csv_files(csv_files, directory)\n    save_concatenated_data(concatenated_data, output_file)\n\n    print(f\"Successfully combined {len(csv_files)} CSV files into {output_file}\")\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: os,pandas. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "os",
+        "pandas",
+        "Medium"
+    ],
+    "keywords": [
+        "os",
+        "pandas"
+    ],
+    "difficulty": "Medium"
+}

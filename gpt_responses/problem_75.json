@@ -1,0 +1,10 @@
+{
+    "id": "problem_75",
+    "code": "\nimport pandas as pd\n\n# Define a class to represent a simple music chart\nclass MusicChart:\n    def __init__(self):\n        # Initialize the chart with an empty DataFrame\n        self.chart = pd.DataFrame(columns=['Artist', 'Song', 'Popularity'])\n\n    def add_song(self, artist, song, popularity):\n        # Add a new song to the chart\n        new_entry = {'Artist': artist, 'Song': song, 'Popularity': popularity}\n        self.chart = self.chart.append(new_entry, ignore_index=True)\n\n    def pop_song(self):\n        # Remove the least popular song from the chart\n        min_popularity_index = self.chart['Popularity'].idxmin()\n        self.chart.drop(min_popularity_index, inplace=True)\n\n    def get_top_songs(self, top_n):\n        # Get the top N songs from the chart\n        return self.chart.nlargest(top_n, 'Popularity')\n\n# Create a new music chart\nmy_chart = MusicChart()\n\n# Add some songs to the chart\nmy_chart.add_song('Artist A', 'Song A', 90)\nmy_chart.add_song('Artist B', 'Song B', 95)\nmy_chart.add_song('Artist C', 'Song C', 85)\n\n# Pop the least popular song\nmy_chart.pop_song()\n\n# Get the top 2 songs\nprint(my_chart.get_top_songs(2))\n\n# Intentional Error: The 'append' method in pandas actually returns a new DataFrame, so the original DataFrame remains unchanged.\n# The correct usage would be to assign the result back to self.chart, like this:\n# self.chart = self.chart.append(new_entry, ignore_index=True)\n",
+    "output": "      Artist    Song  Popularity\n1  Artist B  Song B          95\n0  Artist A  Song A          90",
+    "tags": [
+        "pandas",
+        "pop",
+        "Medium"
+    ]
+}

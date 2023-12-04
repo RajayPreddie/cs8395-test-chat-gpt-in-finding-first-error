@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "<string>", line 17, in <module>
+  File "<string>", line 9, in categorize_words
+NameError: name 'w0rd' is not defined

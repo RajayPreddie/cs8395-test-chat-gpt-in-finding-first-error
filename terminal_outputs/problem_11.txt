@@ -1,0 +1,6 @@
+Function name: add_numbers
+Docstring: Adds two numbers together.
+The sum of 1 and 2 is 3
+Function name: multiply_numbers
+Docstring: Multiplies two numbers together.
+The product of 4 and 5 is 20

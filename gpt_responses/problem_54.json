@@ -1,0 +1,10 @@
+{
+    "id": "problem_54",
+    "code": "\ndef extend_list_with_range(lst, start, end):\n    # This function extends a list with a range of numbers from start to end\n    for i in range(start, end):\n        lst.append(i)\n    return lst\n\ndef find_missing_number(sequence):\n    # This function finds the missing number in a sequence\n    sequence.sort()\n    for index in range(len(sequence) - 1):\n        if sequence[index] + 1 != sequence[index + 1]:\n            return sequence[index] + 1\n    return None\n\n# Main part of the program\nmy_list = [1, 2, 4, 5, 6]\nextend_list_with_range(my_list, 7, 10)\n\n# Find the missing number in the list\nmissing_number = find_missing_number(my_list)\nprint(f\"The missing number is: {missing_number}\")\n\n# The following line has an intentional error\nprint(\"This is the extended list: \", my_extended_list)\n",
+    "output": "The missing number is: 3\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nNameError: name 'my_extended_list' is not defined",
+    "tags": [
+        "extend",
+        "find",
+        "Medium"
+    ]
+}

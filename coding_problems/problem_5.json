@@ -1,10 +1,13 @@
 {
     "id": "problem_5",
-    "description": "\n\nThe problem is an OverflowError when trying to use the re.findall() function to parse a large string. The string is too large for the re.findall() function to handle, resulting in an OverflowError.",
-    "code": "import re\n\nstring = '''This is a very long string with many characters that is too long for the re.findall() function to handle. It will cause an OverflowError.'''\n\nre.findall('\\w+', string)",
+    "code": "\nfrom collections import ChainMap\n\ndef create_chainmap(*dicts):\n    # This function creates a ChainMap from given dictionaries\n    return ChainMap(*dicts)\n\ndef fetch_value(chain_map, key):\n    # This function fetches a value for a given key from the ChainMap\n    try:\n        return chain_map[key]\n    except KeyError:\n        return \"Key not found.\"\n\ndef update_chainmap(chain_map, key, value):\n    # This function updates the ChainMap with a new key-value pair\n    chain_map[key] = value\n\n# Example dictionaries to form the ChainMap\ndict1 = {'a': 1, 'b': 2}\ndict2 = {'c': 3, 'd': 4}\ndict3 = {'e': 5, 'f': 6}\n\n# Creating a ChainMap\nchain_map = create_chainmap(dict1, dict2, dict3)\n\n# Fetching a value from the ChainMap\nprint(fetch_value(chain_map, 'a'))  # Should print 1\n\n# Updating the ChainMap\nupdate_chainmap(chain_map, 'g', 7)\n\n# Fetching the new value to show the update\nprint(fetch_value(chain_map, 'g'))  # Should print 7\n\n# Intentional Error: This should raise an error because 'x' is not in the ChainMap\nprint(fetch_value(chain_map, 'x'))\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: ChainMap. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
     "tags": [
-        "OverflowError",
-        "re",
+        "ChainMap",
         "Easy"
-    ]
+    ],
+    "keywords": [
+        "ChainMap"
+    ],
+    "difficulty": "Easy"
 }

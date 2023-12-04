@@ -1,0 +1,17 @@
+{
+    "id": "problem_94",
+    "code": "\nimport sys\nimport threading\nimport tensorflow as tf\n\n# Function to compute the factorial using TensorFlow\ndef compute_factorial(number):\n    # Create a TensorFlow graph\n    graph = tf.Graph()\n    with graph.as_default():\n        # Placeholder for the input\n        x = tf.placeholder(tf.int32, shape=())\n        # Factorial computation\n        fact = tf.math.factorial(x)\n\n    # Start a TensorFlow session and compute the factorial\n    with tf.compat.v1.Session(graph=graph) as sess:\n        result = sess.run(fact, feed_dict={x: number})\n        return result\n\n# Function to display the factorial result\ndef display_factorial(number):\n    result = compute_factorial(number)\n    print(f\"The factorial of {number} is {result}\")\n\n# Threading function to compute factorial in a separate thread\ndef factorial_thread(number):\n    thread = threading.Thread(target=display_factorial, args=(number,))\n    thread.start()\n    thread.join()\n\nif __name__ == \"__main__\":\n    # Get the number from command line argument\n    if len(sys.argv) > 1:\n        number = int(sys.argv[1])\n    else:\n        number = 5  # Default number for factorial computation\n\n    # Compute the factorial in a separate thread\n    factorial_thread(number)\n\n# Intentional error: TensorFlow 1.x functions are used, but TensorFlow 2.x is assumed\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: sys,tensorflow,threading. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "sys",
+        "tensorflow",
+        "threading",
+        "Hard"
+    ],
+    "keywords": [
+        "sys",
+        "tensorflow",
+        "threading"
+    ],
+    "difficulty": "Hard"
+}

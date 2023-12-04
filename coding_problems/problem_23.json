@@ -1,0 +1,13 @@
+{
+    "id": "problem_23",
+    "code": "\ndef evaluate_expression(expr):\n    # This function evaluates a mathematical expression\n    try:\n        result = eval(expr)\n        print(\"The result of the expression is:\", result)\n    except Exception as e:\n        print(\"There was an error evaluating the expression:\", e)\n\ndef main():\n    # Let's evaluate a simple math expression\n    math_expression = \"3 * (4 + 2)\"\n    evaluate_expression(math_expression)\n\n    # Now let's evaluate a more complex expression\n    complex_expression = \"5 * (3 - (2 ** (1/2))\"\n    evaluate_expression(complex_expression)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: Keyword expression. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "Keyword expression",
+        "Easy"
+    ],
+    "keywords": [
+        "Keyword expression"
+    ],
+    "difficulty": "Easy"
+}

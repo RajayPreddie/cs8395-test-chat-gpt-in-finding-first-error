@@ -1,0 +1,11 @@
+Fibonacci number 0 is 0
+Fibonacci number 1 is 1
+Fibonacci number 2 is 1
+Fibonacci number 3 is 2
+Fibonacci number 4 is 3
+Fibonacci number 5 is 5
+Fibonacci number 6 is 8
+Fibonacci number 7 is 13
+Fibonacci number 8 is 21
+Fibonacci number 9 is 34
+Squares of numbers from 0 to 9: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]

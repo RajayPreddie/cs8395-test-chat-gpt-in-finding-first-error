@@ -1,0 +1,10 @@
+{
+    "id": "problem_78",
+    "code": "\nimport torch\nimport random\n\n# Define a simple neural network using PyTorch\nclass SimpleNet(torch.nn.Module):\n    def __init__(self):\n        super(SimpleNet, self).__init__()\n        self.linear = torch.nn.Linear(1, 1)  # One input, one output\n\n    def forward(self, x):\n        return self.linear(x)\n\n# Initialize the neural network\nnet = SimpleNet()\n\n# Define a random input tensor\ninput_tensor = torch.tensor([[random.uniform(0, 1)]], requires_grad=True)\n\n# Define a dummy target (the correct output)\ntarget = torch.tensor([[random.uniform(0, 1)]])\n\n# Define the loss function\ncriterion = torch.nn.MSELoss()\n\n# Forward pass: Compute predicted output by passing input tensor to the model\npredicted_output = net(input_tensor)\n\n# Compute the loss\nloss = criterion(predicted_output, target)\n\n# Print the loss\nprint(f'Loss: {loss.item()}')\n\n# Backward pass: Compute gradient of the loss with respect to all the learnable parameters\nloss.backward()\n\n# Here's the intentional error: we're trying to update the weights without an optimizer\n# In a proper training loop, we would use an optimizer to adjust the weights\nnet.linear.weight.data.sub_(net.linear.weight.grad.data)\nnet.linear.bias.data.sub_(net.linear.bias.grad.data)\n\n# The above operation should throw an error because the gradients are None by default \n# and we haven't performed a backward pass to compute them.\n",
+    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 34, in <module>\nTypeError: unsupported operand type(s) for sub_: 'NoneType' and 'NoneType'",
+    "tags": [
+        "pytorch",
+        "random",
+        "Medium"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "id": "problem_9",
+    "code": "\nimport asyncio\n\n# Define a simple coroutine that simulates a task\nasync def simulate_task(task_name, duration):\n    print(f\"Task {task_name}: Started\")\n    await asyncio.sleep(duration)\n    print(f\"Task {task_name}: Completed after {duration} seconds\")\n    return f\"Result of {task_name}\"\n\n# Define a main coroutine that schedules multiple tasks\nasync def main():\n    # Schedule three tasks to run concurrently\n    task1 = asyncio.create_task(simulate_task(\"A\", 2))\n    task2 = asyncio.create_task(simulate_task(\"B\", 3))\n    task3 = asyncio.create_task(simulate_task(\"C\", 1))\n    \n    # Wait for all tasks to complete\n    results = await asyncio.gather(task1, task2, task3)\n    print(f\"All tasks completed with results: {results}\")\n\n# Run the main coroutine\nasyncio.run(main())\n\n# Intentional error: attempting to run an event loop that is already running\nloop = asyncio.get_event_loop()\nloop.run_until_complete(main())\n",
+    "output": "Task C: Started\nTask A: Started\nTask B: Started\nTask C: Completed after 1 seconds\nTask A: Completed after 2 seconds\nTask B: Completed after 3 seconds\nAll tasks completed with results: ['Result of A', 'Result of B', 'Result",
+    "tags": [
+        "Coroutine",
+        "Easy"
+    ]
+}

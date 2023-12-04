@@ -1,0 +1,13 @@
+System initialization started.
+System initialization completed.
+Task 0 is starting.
+Task 1 is starting.
+Task 2 is starting.
+Task 3 is starting.
+Task 4 is starting.
+Task 2 is finished.
+Task 1 is finished.
+Task 4 is finished.
+Task 0 is finished.
+Task 3 is finished.
+All tasks completed successfully.

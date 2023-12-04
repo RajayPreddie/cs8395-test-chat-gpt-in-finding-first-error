@@ -1,0 +1,11 @@
+{
+    "id": "problem_94",
+    "code": "\nimport sys\nimport threading\nimport tensorflow as tf\n\n# Function to compute the factorial using TensorFlow\ndef compute_factorial(number):\n    # Create a TensorFlow graph\n    graph = tf.Graph()\n    with graph.as_default():\n        # Placeholder for the input\n        x = tf.placeholder(tf.int32, shape=())\n        # Factorial computation\n        fact = tf.math.factorial(x)\n\n    # Start a TensorFlow session and compute the factorial\n    with tf.compat.v1.Session(graph=graph) as sess:\n        result = sess.run(fact, feed_dict={x: number})\n        return result\n\n# Function to display the factorial result\ndef display_factorial(number):\n    result = compute_factorial(number)\n    print(f\"The factorial of {number} is {result}\")\n\n# Threading function to compute factorial in a separate thread\ndef factorial_thread(number):\n    thread = threading.Thread(target=display_factorial, args=(number,))\n    thread.start()\n    thread.join()\n\nif __name__ == \"__main__\":\n    # Get the number from command line argument\n    if len(sys.argv) > 1:\n        number = int(sys.argv[1])\n    else:\n        number = 5  # Default number for factorial computation\n\n    # Compute the factorial in a separate thread\n    factorial_thread(number)\n\n# Intentional error: TensorFlow 1.x functions are used, but TensorFlow 2.x is assumed\n",
+    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 16, in compute_factorial\n    with tf.compat.v1.Session(graph=graph) as sess:\nAttributeError: module 'tensorflow' has no attribute 'compat'\nDuring handling of the above exception, another exception occurred:\n",
+    "tags": [
+        "sys",
+        "tensorflow",
+        "threading",
+        "Hard"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "problem_55",
+    "code": "\nfrom flask import Flask\n\napp = Flask(__name__)\n\n# Function to find the factorial of a number\ndef find_factorial(num):\n    if num == 1:\n        return 1\n    else:\n        return num * find_factorial(num)\n\n# Route to calculate factorial of 5\n@app.route('/factorial')\ndef calculate_factorial():\n    result = find_factorial(5)\n    return f\"The factorial of 5 is {result}\"\n\nif __name__ == '__main__':\n    app.run(debug=True)\n",
+    "output": "This is a Flask web application and it cannot be run in a command-line interface. Please run this code in a local development server.",
+    "tags": [
+        "find",
+        "flask",
+        "Medium"
+    ]
+}

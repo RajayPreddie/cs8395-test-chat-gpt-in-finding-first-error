@@ -1,0 +1,13 @@
+{
+    "id": "problem_39",
+    "code": "\ndef calculate_average(values: list) -> float:\n    # This function calculates the average of a list of numbers\n    total = sum(values)\n    count = len(values)\n    average = total / count\n    return average\n\ndef display_result(numbers: list):\n    # This function displays the result of the average calculation\n    avg = calculate_average(numbers)\n    print(f\"The average of the numbers is: {avg}\")\n\ndef main():\n    # Main function to demonstrate the functionality\n    sample_data = [10, 20, 30, 40, 50]\n    display_result(sample_data)\n\n    # Let's try with a different set of numbers\n    more_data = [5, 15, 25, 35, 45]\n    display_result(more_data)\n\n# Call the main function\nmain()\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: TypeHinting. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "TypeHinting",
+        "Easy"
+    ],
+    "keywords": [
+        "TypeHinting"
+    ],
+    "difficulty": "Easy"
+}

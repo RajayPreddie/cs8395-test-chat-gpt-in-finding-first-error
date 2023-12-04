@@ -1,0 +1,10 @@
+{
+    "id": "problem_59",
+    "code": "\ndef get_index_of_element(sequence, element):\n    # This function returns the index of the element in a sequence\n    try:\n        index = sequence.index(element)\n        return index\n    except ValueError:\n        # If the element is not found, it returns -1\n        return -1\n\ndef main():\n    # Define a list of fruits\n    fruits = ['apple', 'banana', 'cherry', 'date', 'elderberry']\n\n    # Get the index of 'cherry' in the list\n    cherry_index = get_index_of_element(fruits, 'cherry')\n    print(f\"The index of cherry is: {cherry_index}\")\n\n    # Get the index of 'fig' in the list, which is not present\n    fig_index = get_index_of_element(fruits, 'fig')\n    print(f\"The index of fig is: {fig_index}\")\n\n    # Intentional error: Trying to access an index that doesn't exist\n    print(f\"A fruit that doesn't exist in the list: {fruits[10]}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "output": "The index of cherry is: 2\nThe index of fig is: -1\nTraceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\n  File \"<stdin>\", line 22, in main\nIndexError: list index out of range",
+    "tags": [
+        "get",
+        "index",
+        "Medium"
+    ]
+}

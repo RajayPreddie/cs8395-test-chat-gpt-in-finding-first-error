@@ -1,0 +1,9 @@
+{
+    "id": "problem_7",
+    "code": "\nimport threading\nimport time\n\n# This function simulates a task that takes some time to complete\ndef long_running_task(id):\n    print(f\"Task {id} is starting.\")\n    time.sleep(2)  # Simulating a time-consuming task\n    print(f\"Task {id} is finished.\")\n\n# This function sets up and starts multiple threads for concurrency\ndef run_concurrent_tasks():\n    threads = []\n    for i in range(5):\n        thread = threading.Thread(target=long_running_task, args=(i,))\n        threads.append(thread)\n        thread.start()\n    \n    # Wait for all threads to complete\n    for thread in threads:\n        thread.join()\n\n# This function is supposed to execute some initialization before running tasks\ndef initialize_system():\n    print(\"System initialization started.\")\n    # Simulate some initialization logic\n    time.sleep(1)\n    print(\"System initialization completed.\")\n    run_concurrent_tasks()\n\n# Main program execution\nif __name__ == \"__main__\":\n    initialize_system()\n    print(\"All tasks completed successfully.\")\n",
+    "output": "System initialization started.\nSystem initialization completed.\nTask 0 is starting.\nTask 1 is starting.\nTask 2 is starting.\nTask 3 is starting.\nTask 4 is starting.\nTask 0 is finished.\nTask 1 is finished.\nTask 2 is finished.\nTask 3 is",
+    "tags": [
+        "Concurrency",
+        "Easy"
+    ]
+}

@@ -1,0 +1,2 @@
+Failed to check status of apache2. Error: Command 'systemctl status apache2' returned non-zero exit status 127.
+Cleaned string: 'This is a dirty string!'

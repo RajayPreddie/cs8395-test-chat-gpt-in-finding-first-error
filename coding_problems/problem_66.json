@@ -1,0 +1,15 @@
+{
+    "id": "problem_66",
+    "code": "\nimport json\n\n# Define a function to merge two dictionaries\ndef merge_dictionaries(dict1, dict2):\n    return {**dict1, **dict2}\n\n# Define a function to convert dictionary to JSON and join with a delimiter\ndef convert_and_join(dict_data, delimiter):\n    json_data = json.dumps(dict_data)\n    return delimiter.join(json_data)\n\n# Sample dictionaries\ndict1 = {'key1': 'value1', 'key2': 'value2'}\ndict2 = {'key3': 'value3'}\n\n# Merge dictionaries\nmerged_dict = merge_dictionaries(dict1, dict2)\n\n# Convert to JSON and join with a delimiter\nresult = convert_and_join(merged_dict, '-')\n\n# Print the result\nprint(result)\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: join,json. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "join",
+        "json",
+        "Medium"
+    ],
+    "keywords": [
+        "join",
+        "json"
+    ],
+    "difficulty": "Medium"
+}
