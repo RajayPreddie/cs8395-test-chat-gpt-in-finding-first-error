@@ -45,7 +45,7 @@ The `main.py` script supports the following command-line arguments:
   ```
   python main.py --generate_responses
   ```
-- `-- model`: This is here for integrating with the [cs8395/test-suite](https://github.com/nkalupahana/cs8395-test-suite). The input model is not used. The repository utilizes gpt-4.
+- `-- model`: This is here for integrating with the [cs8395/test-suite](https://github.com/nkalupahana/cs8395-test-suite). The input model is not used. The repository utilizes gpt-4. I recommend to not use the model argument.
 
 
 ## Features
