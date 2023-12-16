@@ -1,0 +1,13 @@
+{
+    "id": "problem_24",
+    "code": "\ndef calculate_tax(price, tax_rate):\n    # A simple lambda function to calculate the tax on a given price\n    tax_calculator = lambda p, r: p * r\n    return tax_calculator(price, tax_rate)\n\ndef apply_discount(price, discount):\n    # Applies a discount to the price\n    discounted_price = price - (price * discount)\n    return discounted_price\n\n# A list of product prices\nproduct_prices = [19.99, 45.50, 109.99, 234.89]\n\n# A tax rate\ntax_rate = 0.07\n\n# Applying tax to each product\ntaxed_prices = list(map(lambda price: calculate_tax(price, tax_rate), product_prices))\n\n# A discount rate\ndiscount_rate = 0.1\n\n# Applying discount to each taxed price\nfinal_prices = list(map(lambda price: apply_discount(price, discount_rate), taxed_prices))\n\n# Printing final prices\nfor price in final_prices:\n    print(f\"Final price: {price}\")\n\n# An intentional error: the 'calculate_tax' function is missing a parameter\n# This will cause a TypeError when the lambda tries to call it\ncalculate_tax_error = lambda price: calculate_tax(price)\nprint(calculate_tax_error(100))\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: Lambda. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "Lambda",
+        "Easy"
+    ],
+    "keywords": [
+        "Lambda"
+    ],
+    "difficulty": "Easy"
+}

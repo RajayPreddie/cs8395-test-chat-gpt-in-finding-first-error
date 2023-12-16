@@ -1,0 +1,9 @@
+{
+    "id": "problem_37",
+    "code": "\ndef string_reverser(s):\n    # This function reverses a string.\n    return s[::-1]\n\ndef main():\n    original_string = \"Python is fun!\"\n    reversed_string = string_reverser(original_string)\n    \n    # Print the original and reversed strings\n    print(\"Original string:\", original_string)\n    print(\"Reversed string:\", reversed_string)\n    \n    # Now let's demonstrate our function with a palindrome\n    palindrome = \"racecar\"\n    if string_reverser(palindrome) == palindrome:\n        print(palindrome, \"is a palindrome!\")\n    else:\n        print(palindrome, \"is not a palindrome!\")\n    \n    # Let's try to reverse an integer, which should cause an error\n    number = 12345\n    reversed_number = string_reverser(number)  # Error: function expects a string, not an integer\n\nif __name__ == \"__main__\":\n    main()\n",
+    "output": "Original string: Python is fun!\nReversed string: !nuf si nohtyP\nracecar is a palindrome!\nTraceback (most recent call last):\n  File \"<stdin>\", line 23, in <module>\n  File \"<stdin>\", line 20, in main\n ",
+    "tags": [
+        "str",
+        "Easy"
+    ]
+}

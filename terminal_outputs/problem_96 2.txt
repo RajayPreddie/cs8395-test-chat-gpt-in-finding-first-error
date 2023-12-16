@@ -1,0 +1,2 @@
+Fruits in uppercase: ['APPLE', 'BANANA', 'CHERRY']
+The union of the two sets is: {1, 2, 3, 4, 5}

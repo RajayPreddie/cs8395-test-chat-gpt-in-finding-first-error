@@ -1,0 +1,13 @@
+{
+    "id": "problem_10",
+    "code": "\nfrom collections import Counter\n\ndef count_elements(sequence):\n    # This function counts the occurrences of elements in a sequence\n    element_counter = Counter(sequence)\n    return element_counter\n\ndef main():\n    # Example usage of the count_elements function\n    fruits = ['apple', 'banana', 'cherry', 'apple', 'cherry', 'cherry']\n    fruit_count = count_elements(fruits)\n    \n    # Print the count of each fruit\n    for fruit, count in fruit_count.items():\n        print(f\"The fruit {fruit} appears {count} times.\")\n\n    # Let's add a twist and count letters in a word\n    word = 'pineapple'\n    letter_count = count_elements(word)\n    \n    # Print the count of each letter\n    for letter, count in letter_count.items():\n        print(f\"The letter {letter} appears {count} times.\")\n\n    # Introduce a deliberate error: trying to count elements of a non-iterable (int)\n    number = 12345\n    number_count = count_elements(number)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: Counter. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "Counter",
+        "Easy"
+    ],
+    "keywords": [
+        "Counter"
+    ],
+    "difficulty": "Easy"
+}

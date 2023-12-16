@@ -1,0 +1,9 @@
+{
+    "id": "problem_40",
+    "code": "\ndef add(a, b):\n    # This function adds two numbers together\n    return a + b\n\ndef subtract(a, b):\n    # This function subtracts the second number from the first\n    return a - b\n\ndef multiply(a, b):\n    # This function multiplies two numbers together\n    return a * b\n\ndef divide(a, b):\n    # This function divides the first number by the second\n    return a / b\n\ndef test_add():\n    # Unit test for add function\n    assert add(2, 3) == 5\n    assert add(0, 0) == 0\n    assert add(-1, 1) == 0\n\ndef test_subtract():\n    # Unit test for subtract function\n    assert subtract(10, 5) == 5\n    assert subtract(0, 0) == 0\n    assert subtract(-1, -1) == 0\n\ndef test_multiply():\n    # Unit test for multiply function\n    assert multiply(3, 4) == 12\n    assert multiply(0, 10) == 0\n    assert multiply(-1, -1) == 1\n\ndef test_divide():\n    # Unit test for divide function\n    assert divide(10, 2) == 5\n    assert divide(5, 2) == 2.5\n    assert divide(0, 1) == 0\n\n# Run our unit tests\ntest_add()\ntest_subtract()\ntest_multiply()\ntest_divide()\n\nprint(\"All tests passed!\")\n",
+    "output": "All tests passed!",
+    "tags": [
+        "UnitTesting",
+        "Easy"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "id": "problem_56",
+    "code": "\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello_world():\n    return 'Hello, World!'\n\n@app.route('/format_date/<date>')\ndef format_date(date):\n    try:\n        # Assume date is in the format YYYYMMDD and convert it to YYYY-MM-DD\n        formatted_date = \"{}-{}-{}\".format(date[:4], date[4:6], date[6:])\n        return 'Formatted date: ' + formatted_date\n    except IndexError:\n        # If the date is not in the expected format, return an error message\n        return 'Error: Date should be in YYYYMMDD format.'\n\n# Note: The following line should be 'if __name__ == \"__main__\":'\n# to ensure the Flask app only runs when executed directly.\nif __name__ == \"_main__\":\n    app.run(debug=True)\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: flask,format. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "flask",
+        "format",
+        "Medium"
+    ],
+    "keywords": [
+        "flask",
+        "format"
+    ],
+    "difficulty": "Medium"
+}

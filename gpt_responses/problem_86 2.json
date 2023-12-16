@@ -1,0 +1,11 @@
+{
+    "id": "problem_86",
+    "code": "\nimport socket\nfrom sklearn.preprocessing import LabelEncoder\n\n# A simple program that acts as a local server and uses sklearn for encoding data\n\n# Initialize the LabelEncoder\nlabel_encoder = LabelEncoder()\n\n# Define some example data to encode\ndata = ['dog', 'cat', 'fish']\n\n# Encode the data\nencoded_data = label_encoder.fit_transform(data)\n\n# Create a dictionary to store the encoded data with a setdefault usage\nencoded_data_dict = {}\nfor item, encoded in zip(data, encoded_data):\n    encoded_data_dict.setdefault(item, encoded)\n\n# Initialize socket\nserver_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n# Bind the socket to localhost and a port\nserver_socket.bind(('localhost', 8080))\n\n# Start listening for connections\nserver_socket.listen(5)\n\nprint(\"Server is running and listening for connections...\")\n\n# Accept connections\nwhile True:\n    client_socket, addr = server_socket.accept()\n    print(f\"Connection from {addr} has been established!\")\n    \n    # Send the encoded data to the client\n    client_socket.send(str(encoded_data_dict).encode('utf-8'))\n    \n    # Close the client socket\n    client_socket.close()\n    break  # The server will close after one connection for simplicity\n\n# Close the server socket\nserver_socket.close()\n",
+    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nModuleNotFoundError: No module named 'sklearn'",
+    "tags": [
+        "setdefault",
+        "sklearn",
+        "socket",
+        "Hard"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "id": "problem_19",
+    "code": "\n# A simple program to manage global application settings\n\n# Global state dictionary\napp_settings = {\n    'theme': 'light',\n    'language': 'en',\n    'notifications_enabled': True\n}\n\ndef update_setting(setting, value):\n    # Updates the setting with the given value\n    global app_settings\n    if setting in app_settings:\n        app_settings[setting] = value\n        print(f\"Setting '{setting}' updated to '{value}'\")\n    else:\n        print(f\"Setting '{setting}' not found.\")\n\ndef print_settings():\n    # Prints all the current settings\n    for setting, value in app_settings.items():\n        print(f\"{setting}: {value}\")\n\ndef main():\n    # Main function to run the program\n    print(\"Current application settings:\")\n    print_settings()\n    \n    # Update some settings\n    update_setting('theme', 'dark')\n    update_setting('language', 'es')\n    update_setting('notifications_enabled', False)\n    \n    print(\"\\nUpdated application settings:\")\n    print_settings()\n\n# Call the main function\nif __name__ == \"__main__\":\n    main()\n",
+    "output": "Current application settings:\ntheme: light\nlanguage: en\nnotifications_enabled: True\nSetting 'theme' updated to 'dark'\nSetting 'language' updated to 'es'\nSetting 'notifications_enabled' updated to 'False'\n\nUpdated application settings:\ntheme: dark\nlanguage: es\nnotifications_enabled:",
+    "tags": [
+        "Global state",
+        "Easy"
+    ]
+}

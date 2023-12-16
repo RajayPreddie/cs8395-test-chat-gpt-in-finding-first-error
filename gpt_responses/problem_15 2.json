@@ -1,0 +1,9 @@
+{
+    "id": "problem_15",
+    "code": "\ndef retrieve_definition(word_dict, word):\n    # This function retrieves a definition from a dictionary\n    return word_dict[word]\n\ndef add_word(word_dict, word, definition):\n    # This function adds a word and its definition to the dictionary\n    if word not in word_dict:\n        word_dict[word] = definition\n\ndef main():\n    # Create a dictionary to store words and their definitions\n    my_dictionary = {}\n\n    # Add some words and definitions to the dictionary\n    add_word(my_dictionary, 'Algorithm', 'A process or set of rules to be followed in calculations or other problem-solving operations.')\n    add_word(my_dictionary, 'Bug', 'An error in a program that prevents the program from running as expected.')\n    add_word(my_dictionary, 'Function', 'A block of organized, reusable code that is used to perform a single, related action.')\n\n    # Retrieve and print the definitions\n    print(retrieve_definition(my_dictionary, 'Algorithm'))\n    print(retrieve_definition(my_dictionary, 'Bug'))\n    print(retrieve_definition(my_dictionary, 'Function'))\n\n    # Intentionally introduce an error: try to retrieve a definition of a non-existing word\n    print(retrieve_definition(my_dictionary, 'NonExistentWord'))\n\nif __name__ == \"__main__\":\n    main()\n",
+    "output": "A process or set of rules to be followed in calculations or other problem-solving operations.\nAn error in a program that prevents the program from running as expected.\nA block of organized, reusable code that is used to perform a single, related action.\nTraceback (most recent call last):\n  File \"<",
+    "tags": [
+        "dict",
+        "Easy"
+    ]
+}

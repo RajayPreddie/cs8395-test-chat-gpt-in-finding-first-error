@@ -1,0 +1,11 @@
+{
+    "id": "problem_99",
+    "code": "\nimport asyncio\n\n# This function will asynchronously fill a bytearray with values from a list\nasync def fill_bytearray_async(data_list, byte_array):\n    for item in data_list:\n        # Simulate a small delay\n        await asyncio.sleep(0.1)\n        byte_array.append(item)\n\n# This coroutine initializes a bytearray and a list with some values\n# and starts the process of filling the bytearray asynchronously\nasync def main():\n    data_list = [100, 110, 120, 130, 140]  # Some dummy data\n    byte_array = bytearray()\n    \n    await fill_bytearray_async(data_list, byte_array)\n    \n    print(\"Bytearray contents:\", byte_array)\n\n# Running the main coroutine\nasyncio.run(main())\n",
+    "output": "Bytearray contents: bytearray(b'dnxt\\x8c')",
+    "tags": [
+        "list",
+        "asyncio",
+        "bytearray",
+        "Hard"
+    ]
+}

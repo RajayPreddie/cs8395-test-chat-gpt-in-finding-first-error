@@ -1,0 +1,17 @@
+{
+    "id": "problem_95",
+    "code": "\nimport tensorflow as tf\nimport threading\n\n# Define a simple TensorFlow model\nclass SimpleModel(tf.Module):\n    def __init__(self):\n        self.w = tf.Variable(tf.random.normal([1]))\n\n    def __call__(self, x):\n        return self.w * x\n\n# Function to train the model in a separate thread\ndef train_model(model, data):\n    optimizer = tf.optimizers.SGD(learning_rate=0.1)\n\n    def train_step():\n        with tf.GradientTape() as tape:\n            predictions = model(data)\n            loss = tf.reduce_mean(tf.square(predictions - data))\n        gradients = tape.gradient(loss, [model.w])\n        optimizer.apply_gradients(zip(gradients, [model.w]))\n\n    for _ in range(10):\n        train_step()\n\n# Instantiate the model\nmodel = SimpleModel()\n\n# Sample data\ndata = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0])\n\n# Start the training in a separate thread\ntraining_thread = threading.Thread(target=train_model, args=(model, data))\ntraining_thread.start()\ntraining_thread.join()\n\n# Function that tries to perform a union operation on tensors (intentional error)\ndef tensor_union(tensor_a, tensor_b):\n    return tf.sets.union(tensor_a, tensor_b)\n\n# Attempt to perform a union on two tensors\nresult = tensor_union(tf.constant([1, 2, 3]), tf.constant([3, 4, 5]))\nprint(result)\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: tensorflow,threading,union. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "tensorflow",
+        "threading",
+        "union",
+        "Hard"
+    ],
+    "keywords": [
+        "tensorflow",
+        "threading",
+        "union"
+    ],
+    "difficulty": "Hard"
+}

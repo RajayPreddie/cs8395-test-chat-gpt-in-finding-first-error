@@ -1,0 +1,10 @@
+{
+    "id": "problem_71",
+    "code": "\nimport multiprocessing\nimport matplotlib.pyplot as plt\nimport numpy as np\n\ndef plot_graph(queue):\n    x = np.linspace(0, 10, 100)\n    y = np.sin(x)\n    plt.plot(x, y)\n    plt.title('Sine Wave Example')\n    plt.xlabel('X axis')\n    plt.ylabel('Y axis')\n    plt.grid(True)\n    plt.savefig('sine_wave.png')\n    queue.put('Plot saved as sine_wave.png')\n\ndef main():\n    queue = multiprocessing.Queue()\n    process = multiprocessing.Process(target=plot_graph, args=(queue,))\n    process.start()\n    process.join()\n    result = queue.get()\n    print(result)\n\nif __name__ == '__main__':\n    main()\n",
+    "output": "Plot saved as sine_wave.png",
+    "tags": [
+        "matplotlib",
+        "multiprocessing",
+        "Medium"
+    ]
+}

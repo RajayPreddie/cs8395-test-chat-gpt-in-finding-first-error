@@ -1,0 +1,15 @@
+{
+    "id": "problem_53",
+    "code": "\ndef check_file_extension(file_list, extension):\n    # This function checks if files in the list end with the given extension\n    return [file for file in file_list if file.endswith(extension)]\n\ndef extend_file_list(file_list, additional_files):\n    # This function extends the file list with additional files\n    file_list.extend(additional_files)\n    return file_list\n\n# Example usage\nfiles = ['report.docx', 'image.png', 'notes.txt']\nnew_files = ['summary.docx', 'graph.pdf']\ndesired_extension = '.docx'\n\n# Extend the file list with new files\nfiles = extend_file_list(files, new_files)\n\n# Check for files with the desired extension\ndocx_files = check_file_extension(files, desired_extension)\nprint(\"Files with the desired extension:\", docx_files)\n\n# Intentionally introduce an error: misspelling the function name\n# The error is subtle as it looks like a typical function call\ndocx_files = chek_file_extension(files, desired_extension)\nprint(\"Files with the desired extension after error:\", docx_files)\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: endswith,extend. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "endswith",
+        "extend",
+        "Medium"
+    ],
+    "keywords": [
+        "endswith",
+        "extend"
+    ],
+    "difficulty": "Medium"
+}

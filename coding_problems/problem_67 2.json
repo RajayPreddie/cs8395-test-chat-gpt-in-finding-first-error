@@ -1,0 +1,15 @@
+{
+    "id": "problem_67",
+    "code": "\nimport json\n\n# Define a function to extract keys from a JSON object and print them\ndef print_json_keys(json_data):\n    try:\n        keys = json_data.keys()\n        print(\"JSON keys:\", keys)\n    except AttributeError:\n        print(\"The provided data is not a valid JSON object.\")\n\n# Define a function to add a new key-value pair to a JSON object\ndef add_key_value(json_data, key, value):\n    json_data[key] = value\n    return json_data\n\n# Sample JSON data\ndata = '{\"name\": \"Alice\", \"age\": 30, \"city\": \"New York\"}'\n\n# Convert JSON string to Python dictionary\ndata_dict = json.loads(data)\n\n# Print keys of the JSON data\nprint_json_keys(data_dict)\n\n# Add a new key-value pair to the JSON data\nupdated_data = add_key_value(data_dict, \"email\", \"alice@example.com\")\n\n# Convert the updated dictionary back to a JSON string\nupdated_json_data = json.dumps(updated_data)\n\n# Intentionally introduce an error by trying to print keys from a string instead of a dictionary\nprint_json_keys(updated_json_data)\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: json,keys. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "json",
+        "keys",
+        "Medium"
+    ],
+    "keywords": [
+        "json",
+        "keys"
+    ],
+    "difficulty": "Medium"
+}

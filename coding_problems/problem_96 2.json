@@ -1,0 +1,17 @@
+{
+    "id": "problem_96",
+    "code": "\nimport threading\n\n# Function to convert a list of strings to uppercase\ndef convert_to_upper(string_list):\n    for i in range(len(string_list)):\n        string_list[i] = string_list[i].upper()\n    return string_list\n\n# Function to perform union of two sets and print the result\ndef print_union(set1, set2):\n    union_set = set1.union(set2)\n    print(f\"The union of the two sets is: {union_set}\")\n\n# Thread function to perform both operations\ndef perform_operations():\n    fruits = [\"apple\", \"banana\", \"cherry\"]\n    colors = [\"red\", \"green\", \"blue\"]\n\n    # Convert fruit names to uppercase\n    upper_fruits = convert_to_upper(fruits)\n\n    # Print the fruits in uppercase\n    print(f\"Fruits in uppercase: {upper_fruits}\")\n\n    # Create two sets\n    set1 = set([1, 2, 3])\n    set2 = set([3, 4, 5])\n\n    # Print the union of the two sets\n    print_union(set1, set2)\n\n# Create and start the thread\nthread = threading.Thread(target=perform_operations)\nthread.start()\n\n# Wait for the thread to complete\nthread.join()\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: threading,union,upper. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "threading",
+        "union",
+        "upper",
+        "Hard"
+    ],
+    "keywords": [
+        "threading",
+        "union",
+        "upper"
+    ],
+    "difficulty": "Hard"
+}

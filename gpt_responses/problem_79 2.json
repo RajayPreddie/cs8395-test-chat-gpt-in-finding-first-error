@@ -1,0 +1,10 @@
+{
+    "id": "problem_79",
+    "code": "\nimport random\nimport re\n\ndef generate_random_string():\n    # Generate a random string of lowercase letters and numbers\n    characters = 'abcdefghijklmnopqrstuvwxyz0123456789'\n    return ''.join(random.choice(characters) for i in range(10))\n\ndef extract_numbers(string):\n    # Extract all numbers from the given string using regex\n    return re.findall(r'\\d+', string)\n\ndef main():\n    # Generate a unique random string\n    random_string = generate_random_string()\n    print(\"Generated random string:\", random_string)\n\n    # Extract numbers from the random string\n    numbers = extract_numbers(random_string)\n    print(\"Extracted numbers from the string:\", numbers)\n\n    # Calculate the sum of extracted numbers\n    # Intentional error: sum() expects an iterable of numbers, not strings\n    total = sum(numbers)\n    print(\"Total sum of numbers:\", total)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "output": "Generated random string: 3c6b4j5k1i\nExtracted numbers from the string: ['3', '6', '4', '5', '1']\nTraceback (most recent call last):\n  File \"<stdin>\", line 27, in <module>\n ",
+    "tags": [
+        "random",
+        "re",
+        "Medium"
+    ]
+}

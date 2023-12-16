@@ -1,0 +1,15 @@
+{
+    "id": "problem_54",
+    "code": "\ndef extend_list_with_range(lst, start, end):\n    # This function extends a list with a range of numbers from start to end\n    for i in range(start, end):\n        lst.append(i)\n    return lst\n\ndef find_missing_number(sequence):\n    # This function finds the missing number in a sequence\n    sequence.sort()\n    for index in range(len(sequence) - 1):\n        if sequence[index] + 1 != sequence[index + 1]:\n            return sequence[index] + 1\n    return None\n\n# Main part of the program\nmy_list = [1, 2, 4, 5, 6]\nextend_list_with_range(my_list, 7, 10)\n\n# Find the missing number in the list\nmissing_number = find_missing_number(my_list)\nprint(f\"The missing number is: {missing_number}\")\n\n# The following line has an intentional error\nprint(\"This is the extended list: \", my_extended_list)\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: extend,find. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "extend",
+        "find",
+        "Medium"
+    ],
+    "keywords": [
+        "extend",
+        "find"
+    ],
+    "difficulty": "Medium"
+}

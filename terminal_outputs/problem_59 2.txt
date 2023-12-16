@@ -1,0 +1,2 @@
+The index of cherry is: 2
+The index of fig is: -1

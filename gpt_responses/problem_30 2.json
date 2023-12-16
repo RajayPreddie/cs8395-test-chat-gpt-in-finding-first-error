@@ -1,0 +1,9 @@
+{
+    "id": "problem_30",
+    "code": "\ndef calculate_discounted_price(price, discount):\n    \"\"\"\n    This function calculates the discounted price of an item.\n    It takes the original price and the discount rate.\n    \"\"\"\n    discounted_price = price - (price * discount / 100)\n    return discounted_price\n\ndef print_item_price(item_name, price, discount=10):\n    \"\"\"\n    This function prints out the item name and its discounted price.\n    The discount rate has a non-default argument if not provided.\n    \"\"\"\n    final_price = calculate_discounted_price(price, discount)\n    print(f\"The {item_name} after a {discount}% discount is: ${final_price:.2f}\")\n\n# Example usage of the functions\nprint_item_price(\"Book\", 20)\nprint_item_price(\"Board game\", 50, 20)\n\n# Intentional error: calling a function with incorrect argument order\ncalculate_discounted_price(25)\n",
+    "output": "The Book after a 10% discount is: $18.00\nThe Board game after a 20% discount is: $40.00\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nTypeError: calculate_discounted_price() missing",
+    "tags": [
+        "Non-default argument",
+        "Easy"
+    ]
+}

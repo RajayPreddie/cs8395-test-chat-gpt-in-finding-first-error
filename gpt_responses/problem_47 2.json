@@ -1,0 +1,9 @@
+{
+    "id": "problem_47",
+    "code": "\nimport shutil\nimport os\n\ndef copy_file(source, destination):\n    # This function copies a file from the source to the destination\n    try:\n        shutil.copy2(source, destination)\n        print(f\"File copied successfully from {source} to {destination}.\")\n    except Exception as e:\n        print(f\"An error occurred: {e}\")\n\ndef create_backup():\n    # This function creates a backup of a file\n    file_path = \"important_data.txt\"\n    backup_path = \"backup_important_data.txt\"\n    copy_file(file_path, backup_path)\n\ndef main():\n    # Main function to create a backup of an important file\n    print(\"Starting backup process...\")\n    create_backup()\n    print(\"Backup process completed.\")\n\n# Call the main function\nmain()\n",
+    "output": "Starting backup process...\nAn error occurred: [Errno 2] No such file or directory: 'important_data.txt'\nBackup process completed.",
+    "tags": [
+        "copy",
+        "Easy"
+    ]
+}

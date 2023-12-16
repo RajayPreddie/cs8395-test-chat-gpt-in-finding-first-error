@@ -1,0 +1,5 @@
+Original tuple: (4, 8, 15, 16, 23, 42)
+Average of tuple values: 18.0
+Maximum value in tuple: 42
+Minimum value in tuple: 4
+Tuple after multiplication by average: (72.0, 144.0, 270.0, 288.0, 414.0, 756.0)

@@ -1,0 +1,15 @@
+{
+    "id": "problem_78",
+    "code": "\nimport torch\nimport random\n\n# Define a simple neural network using PyTorch\nclass SimpleNet(torch.nn.Module):\n    def __init__(self):\n        super(SimpleNet, self).__init__()\n        self.linear = torch.nn.Linear(1, 1)  # One input, one output\n\n    def forward(self, x):\n        return self.linear(x)\n\n# Initialize the neural network\nnet = SimpleNet()\n\n# Define a random input tensor\ninput_tensor = torch.tensor([[random.uniform(0, 1)]], requires_grad=True)\n\n# Define a dummy target (the correct output)\ntarget = torch.tensor([[random.uniform(0, 1)]])\n\n# Define the loss function\ncriterion = torch.nn.MSELoss()\n\n# Forward pass: Compute predicted output by passing input tensor to the model\npredicted_output = net(input_tensor)\n\n# Compute the loss\nloss = criterion(predicted_output, target)\n\n# Print the loss\nprint(f'Loss: {loss.item()}')\n\n# Backward pass: Compute gradient of the loss with respect to all the learnable parameters\nloss.backward()\n\n# Here's the intentional error: we're trying to update the weights without an optimizer\n# In a proper training loop, we would use an optimizer to adjust the weights\nnet.linear.weight.data.sub_(net.linear.weight.grad.data)\nnet.linear.bias.data.sub_(net.linear.bias.grad.data)\n\n# The above operation should throw an error because the gradients are None by default \n# and we haven't performed a backward pass to compute them.\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: pytorch,random. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "pytorch",
+        "random",
+        "Medium"
+    ],
+    "keywords": [
+        "pytorch",
+        "random"
+    ],
+    "difficulty": "Medium"
+}

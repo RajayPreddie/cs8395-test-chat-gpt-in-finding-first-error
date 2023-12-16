@@ -1,0 +1,9 @@
+{
+    "id": "problem_26",
+    "code": "\ndef memory_inspector(byte_object):\n    try:\n        mem_view = memoryview(byte_object)\n        print(\"Memory address:\", mem_view.obj)\n        print(\"Element size in bytes:\", mem_view.itemsize)\n        print(\"Number of elements:\", mem_view.nbytes)\n        print(\"Length of memoryview:\", len(mem_view))\n        print(\"First element value:\", mem_view[0])\n    except TypeError:\n        print(\"Provided object is not a bytes-like object.\")\n\ndef main():\n    data = bytearray(b'\\x00\\x01\\x02\\x03\\x04')\n    memory_inspector(data)\n\n    # Intentional error: Trying to create a memoryview of a non-bytes-like object\n    non_byte_data = 12345\n    memory_inspector(non_byte_data)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "output": "Memory address: bytearray(b'\\x00\\x01\\x02\\x03\\x04')\nElement size in bytes: 1\nNumber of elements: 5\nLength of memoryview: 5\nFirst element value: 0\nProvided object is not a bytes-like object.",
+    "tags": [
+        "MemoryView",
+        "Easy"
+    ]
+}

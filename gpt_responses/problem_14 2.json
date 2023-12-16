@@ -1,0 +1,9 @@
+{
+    "id": "problem_14",
+    "code": "\nfrom collections import deque\n\n# This program is designed to manage tasks using a deque data structure\n# It allows adding tasks, completing tasks, and viewing the current task list\n\nclass TaskManager:\n    def __init__(self):\n        self.tasks = deque()\n\n    def add_task(self, task):\n        \"\"\"Add a new task to the task list.\"\"\"\n        self.tasks.append(task)\n\n    def complete_task(self):\n        \"\"\"Complete the task at the front of the deque.\"\"\"\n        if self.tasks:\n            self.tasks.popleft()\n        else:\n            print(\"No tasks to complete.\")\n\n    def view_tasks(self):\n        \"\"\"Print all the tasks in the task list.\"\"\"\n        print(\"Tasks in your list:\")\n        for task in self.tasks:\n            print(task)\n\n# Example usage of the TaskManager class\ntask_manager = TaskManager()\ntask_manager.add_task(\"Learn Python\")\ntask_manager.add_task(\"Build a project\")\ntask_manager.add_task(\"Apply for jobs\")\n\n# Intentionally calling the wrong method to view tasks\n# This should have been task_manager.view_tasks()\ntask_manager.view_task()\n",
+    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 31, in <module>\nAttributeError: 'TaskManager' object has no attribute 'view_task'",
+    "tags": [
+        "Deque",
+        "Easy"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "id": "problem_33",
+    "code": "\ndef factorial(n):\n    # This function calculates the factorial of a given number using recursion.\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n)\n\n# Calculate the factorial of 5\nresult = factorial(5)\nprint(\"The factorial of 5 is:\", result)\n\n# Calculate the factorial of a negative number (intentional error)\nnegative_result = factorial(-1)\nprint(\"The factorial of -1 (which is an error case) is:\", negative_result)\n",
+    "output": "The factorial of 5 is: 120\nTraceback (most recent call last):\n  File \"<stdin>\", line 12, in <module>\n  File \"<stdin>\", line 7, in factorial\n  File \"<stdin>\", line 7, in factorial\n  File \"<stdin>\",",
+    "tags": [
+        "Recursion",
+        "Easy"
+    ]
+}

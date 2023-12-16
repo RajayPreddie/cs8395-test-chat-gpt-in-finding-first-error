@@ -1,0 +1,13 @@
+{
+    "id": "problem_40",
+    "code": "\ndef add(a, b):\n    # This function adds two numbers together\n    return a + b\n\ndef subtract(a, b):\n    # This function subtracts the second number from the first\n    return a - b\n\ndef multiply(a, b):\n    # This function multiplies two numbers together\n    return a * b\n\ndef divide(a, b):\n    # This function divides the first number by the second\n    return a / b\n\ndef test_add():\n    # Unit test for add function\n    assert add(2, 3) == 5\n    assert add(0, 0) == 0\n    assert add(-1, 1) == 0\n\ndef test_subtract():\n    # Unit test for subtract function\n    assert subtract(10, 5) == 5\n    assert subtract(0, 0) == 0\n    assert subtract(-1, -1) == 0\n\ndef test_multiply():\n    # Unit test for multiply function\n    assert multiply(3, 4) == 12\n    assert multiply(0, 10) == 0\n    assert multiply(-1, -1) == 1\n\ndef test_divide():\n    # Unit test for divide function\n    assert divide(10, 2) == 5\n    assert divide(5, 2) == 2.5\n    assert divide(0, 1) == 0\n\n# Run our unit tests\ntest_add()\ntest_subtract()\ntest_multiply()\ntest_divide()\n\nprint(\"All tests passed!\")\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: UnitTesting. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "UnitTesting",
+        "Easy"
+    ],
+    "keywords": [
+        "UnitTesting"
+    ],
+    "difficulty": "Easy"
+}

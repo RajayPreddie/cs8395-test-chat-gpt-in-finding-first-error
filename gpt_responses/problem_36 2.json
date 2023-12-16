@@ -1,0 +1,9 @@
+{
+    "id": "problem_36",
+    "code": "\ndef unique_elements_from_lists(list1, list2):\n    # This function takes two lists and returns a set of unique elements from both lists\n    return set(list1).union(set(list2))\n\ndef common_elements_from_lists(list1, list2):\n    # This function takes two lists and returns a set of common elements from both lists\n    return set(list1).intersection(list2)\n\n# Example usage of the functions\nlist_a = [1, 2, 3, 4, 5]\nlist_b = [4, 5, 6, 7, 8]\n\n# Get unique elements from both lists\nunique_elements = unique_elements_from_lists(list_a, list_b)\nprint(\"Unique elements from both lists:\", unique_elements)\n\n# Get common elements from both lists\ncommon_elements = common_elements_from_lists(list_a, list_b)\nprint(\"Common elements from both lists:\", common_elements)\n\n# Intentional Error: The following function is supposed to calculate the symmetric difference of two sets\ndef symmetric_difference(list1, list2):\n    # Returns the symmetric difference of two sets (elements present in either set, but not both)\n    return set(list1).symmetric_difference(list2)\n\n# Attempt to calculate the symmetric difference using lists instead of sets\nsym_diff = symmetric_difference(list_a, list_b)\nprint(\"Symmetric difference of both lists:\", sym_diff)\n\n# Intentional Error: The following line will cause a NameError\nprint(\"An element from the symmetric difference:\", sym_diff_element)\n",
+    "output": "Unique elements from both lists: {1, 2, 3, 4, 5, 6, 7, 8}\nCommon elements from both lists: {4, 5}\nSymmetric difference of both lists: {1, 2, 3, 6",
+    "tags": [
+        "set",
+        "Easy"
+    ]
+}

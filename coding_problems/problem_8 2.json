@@ -1,0 +1,13 @@
+{
+    "id": "problem_8",
+    "code": "\nimport os\nfrom contextlib import contextmanager\n\n# Custom context manager for opening and writing to a file\n@contextmanager\ndef file_writer(file_name, mode):\n    try:\n        # Open the file\n        file = open(file_name, mode)\n        yield file\n    finally:\n        # Close the file\n        file.close()\n\n# Function to write data to a file using our custom context manager\ndef write_data_to_file(file_path, data):\n    with file_writer(file_path, 'w') as file:\n        file.write(data)\n\n# Main function to execute the program\ndef main():\n    file_path = 'output.txt'\n    data = 'This is some text that will be written to the file.'\n    write_data_to_file(file_path, data)\n\n    # Read the data from the file to confirm it was written\n    with open(file_path, 'r') as file:\n        content = file.read()\n        print(\"Content of the file:\", content)\n\n# Call the main function\nmain()\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: ContextManager. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "ContextManager",
+        "Easy"
+    ],
+    "keywords": [
+        "ContextManager"
+    ],
+    "difficulty": "Easy"
+}

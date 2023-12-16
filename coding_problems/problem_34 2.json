@@ -1,0 +1,13 @@
+{
+    "id": "problem_34",
+    "code": "\nclass MirrorObject:\n    def __init__(self, original):\n        self.original = original\n\n    def reflect_methods(self):\n        methods = [method for method in dir(self.original) if callable(getattr(self.original, method))]\n        for method in methods:\n            setattr(self, method, self._create_reflection(method))\n\n    def _create_reflection(self, method_name):\n        def reflected_method(*args, **kwargs):\n            return getattr(self.original, method_name)(*args, **kwargs)\n        return reflected_method\n\n# Example usage of MirrorObject\nif __name__ == \"__main__\":\n    original_list = [1, 2, 3, 4]\n    mirrored_list = MirrorObject(original_list)\n    mirrored_list.reflect_methods()\n\n    # Intentionally introduce an error: misspelled method name\n    print(mirrored_list.appned(5))  # Should be 'append', not 'appned'\n    print(mirrored_list.original)\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: Reflection. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "Reflection",
+        "Easy"
+    ],
+    "keywords": [
+        "Reflection"
+    ],
+    "difficulty": "Easy"
+}

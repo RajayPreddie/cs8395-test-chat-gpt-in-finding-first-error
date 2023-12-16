@@ -1,0 +1,13 @@
+{
+    "id": "problem_18",
+    "code": "\ndef fibonacci_generator(limit):\n    \"\"\"Generate Fibonacci sequence up to a limit\"\"\"\n    a, b = 0, 1\n    while a < limit:\n        yield a\n        a, b = b, a + b\n\ndef print_fibonacci_sequence(limit):\n    \"\"\"Prints out the Fibonacci sequence up to a given limit\"\"\"\n    fib_sequence = fibonacci_generator(limit)\n    for number in fib_sequence:\n        print(number)\n\n# Set a limit for the Fibonacci sequence\nfib_limit = 10\n\n# Print the Fibonacci sequence up to the limit\nprint_fibonacci_sequence(fib_limit)\n\n# Intentional Error: The function below is supposed to calculate the sum of Fibonacci numbers\n# up to a certain limit, but it contains an error.\ndef fibonacci_sum(limit):\n    fib_sequence = fibonacci_generator(limit)\n    total_sum = 0\n    for number in fib_sequence:\n        total_sum += number\n    return total\n\n# Calculate and print the sum of Fibonacci numbers up to the limit\nfib_sum = fibonacci_sum(fib_limit)\nprint(f\"Sum of Fibonacci numbers up to {fib_limit}: {fib_sum}\")\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: Generator. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "Generator",
+        "Easy"
+    ],
+    "keywords": [
+        "Generator"
+    ],
+    "difficulty": "Easy"
+}

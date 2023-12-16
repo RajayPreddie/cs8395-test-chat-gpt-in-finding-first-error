@@ -1,0 +1,17 @@
+{
+    "id": "problem_86",
+    "code": "\nimport socket\nfrom sklearn.preprocessing import LabelEncoder\n\n# A simple program that acts as a local server and uses sklearn for encoding data\n\n# Initialize the LabelEncoder\nlabel_encoder = LabelEncoder()\n\n# Define some example data to encode\ndata = ['dog', 'cat', 'fish']\n\n# Encode the data\nencoded_data = label_encoder.fit_transform(data)\n\n# Create a dictionary to store the encoded data with a setdefault usage\nencoded_data_dict = {}\nfor item, encoded in zip(data, encoded_data):\n    encoded_data_dict.setdefault(item, encoded)\n\n# Initialize socket\nserver_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n# Bind the socket to localhost and a port\nserver_socket.bind(('localhost', 8080))\n\n# Start listening for connections\nserver_socket.listen(5)\n\nprint(\"Server is running and listening for connections...\")\n\n# Accept connections\nwhile True:\n    client_socket, addr = server_socket.accept()\n    print(f\"Connection from {addr} has been established!\")\n    \n    # Send the encoded data to the client\n    client_socket.send(str(encoded_data_dict).encode('utf-8'))\n    \n    # Close the client socket\n    client_socket.close()\n    break  # The server will close after one connection for simplicity\n\n# Close the server socket\nserver_socket.close()\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: setdefault,sklearn,socket. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "setdefault",
+        "sklearn",
+        "socket",
+        "Hard"
+    ],
+    "keywords": [
+        "setdefault",
+        "sklearn",
+        "socket"
+    ],
+    "difficulty": "Hard"
+}

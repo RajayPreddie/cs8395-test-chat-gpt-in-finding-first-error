@@ -1,0 +1,9 @@
+{
+    "id": "problem_32",
+    "code": "\nclass Animal:\n    def speak(self):\n        raise NotImplementedError(\"Subclasses must implement this method\")\n\nclass Dog(Animal):\n    def speak(self):\n        return \"Woof!\"\n\nclass Cat(Animal):\n    def speak(self):\n        return \"Meow!\"\n\nclass Duck(Animal):\n    def speak(self):\n        return \"Quack!\"\n\ndef animal_sound(animals):\n    for animal in animals:\n        print(animal.speak())\n\n# Main program\nanimals = [Dog(), Cat(), Duck(), \"Tiger\"]\nanimal_sound(animals)\n",
+    "output": "Woof!\nMeow!\nQuack!\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\n  File \"<stdin>\", line 4, in animal_sound\nAttributeError: 'str' object has no attribute 'speak'",
+    "tags": [
+        "Polymorphism",
+        "Easy"
+    ]
+}

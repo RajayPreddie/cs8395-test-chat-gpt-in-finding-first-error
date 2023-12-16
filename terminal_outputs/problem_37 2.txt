@@ -1,0 +1,3 @@
+Original string: Python is fun!
+Reversed string: !nuf si nohtyP
+racecar is a palindrome!

@@ -1,0 +1,13 @@
+{
+    "id": "problem_9",
+    "code": "\nimport asyncio\n\n# Define a simple coroutine that simulates a task\nasync def simulate_task(task_name, duration):\n    print(f\"Task {task_name}: Started\")\n    await asyncio.sleep(duration)\n    print(f\"Task {task_name}: Completed after {duration} seconds\")\n    return f\"Result of {task_name}\"\n\n# Define a main coroutine that schedules multiple tasks\nasync def main():\n    # Schedule three tasks to run concurrently\n    task1 = asyncio.create_task(simulate_task(\"A\", 2))\n    task2 = asyncio.create_task(simulate_task(\"B\", 3))\n    task3 = asyncio.create_task(simulate_task(\"C\", 1))\n    \n    # Wait for all tasks to complete\n    results = await asyncio.gather(task1, task2, task3)\n    print(f\"All tasks completed with results: {results}\")\n\n# Run the main coroutine\nasyncio.run(main())\n\n# Intentional error: attempting to run an event loop that is already running\nloop = asyncio.get_event_loop()\nloop.run_until_complete(main())\n",
+    "prompt": "As a novice programmer, your task is to create a Python program that intentionally contains an error. Your challenge is to ensure that the error does not lead to an infinite recursion or an infinite loop. The program should not require any user input. Additionally, avoid including any comments that suggest there is an error. In your comments, act as if the code works perfectly.To make your Python program unique and interesting, consider using the following keyword(s) as inspiration. The keyword(s) should guide the overall theme, functionality, or structure of your program, making it both practical and distinctive: Coroutine. For instance, think of innovative ways to incorporate the keyword(s) into the python program idea. The keyword(s) act as a foundation for crafting a Python program that someone might genuinely find useful or intriguing, while subtly introducing an error that is not immediately obvious. The ultimate goal is to create a Python program that is both practical and distinctive, drawing inspiration from the provided keyword(s) to set it apart from typical programming solutions. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Here are additional specifics. Do not output in Markdown format. Exclude code comments from the code.",
+    "tags": [
+        "Coroutine",
+        "Easy"
+    ],
+    "keywords": [
+        "Coroutine"
+    ],
+    "difficulty": "Easy"
+}

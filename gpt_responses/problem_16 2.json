@@ -1,0 +1,9 @@
+{
+    "id": "problem_16",
+    "code": "\ndef unique_elements_sum(data):\n    # This function calculates the sum of unique elements in the given list\n    unique_data = frozenset(data)\n    return sum(unique_data)\n\ndef main():\n    # Main function to test the unique_elements_sum function\n    numbers = [1, 2, 3, 2, 1, 4, 5, 4, 6]\n    result = unique_elements_sum(numbers)\n    print(\"The sum of unique numbers is:\", result)\n\n    # Demonstrating the use of frozenset with a slight twist\n    fruits = [\"apple\", \"banana\", \"cherry\", \"apple\", \"cherry\"]\n    unique_fruits = frozenset(fruits)\n    print(\"Unique fruits:\", unique_fruits)\n\n    # Intentionally introducing an error: attempting to add an element to the frozenset\n    unique_fruits.add(\"orange\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "output": "The sum of unique numbers is: 21\nUnique fruits: frozenset({'cherry', 'banana', 'apple'})\nTraceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\n  File \"<stdin>\", line 18, in main\nAttribute",
+    "tags": [
+        "frozenset",
+        "Easy"
+    ]
+}

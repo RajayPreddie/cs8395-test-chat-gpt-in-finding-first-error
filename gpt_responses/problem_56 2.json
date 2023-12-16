@@ -1,0 +1,10 @@
+{
+    "id": "problem_56",
+    "code": "\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello_world():\n    return 'Hello, World!'\n\n@app.route('/format_date/<date>')\ndef format_date(date):\n    try:\n        # Assume date is in the format YYYYMMDD and convert it to YYYY-MM-DD\n        formatted_date = \"{}-{}-{}\".format(date[:4], date[4:6], date[6:])\n        return 'Formatted date: ' + formatted_date\n    except IndexError:\n        # If the date is not in the expected format, return an error message\n        return 'Error: Date should be in YYYYMMDD format.'\n\n# Note: The following line should be 'if __name__ == \"__main__\":'\n# to ensure the Flask app only runs when executed directly.\nif __name__ == \"_main__\":\n    app.run(debug=True)\n",
+    "output": "The script does not produce any output as it contains a typo in the condition \"if __name__ == '_main__':\". It should be \"if __name__ == '__main__':\". As a result, the Flask app is not run.",
+    "tags": [
+        "flask",
+        "format",
+        "Medium"
+    ]
+}

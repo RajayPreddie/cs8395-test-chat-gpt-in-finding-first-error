@@ -1,0 +1,10 @@
+{
+    "id": "problem_64",
+    "code": "\ndef check_inventory_superset(full_inventory, partial_inventory):\n    \"\"\"\n    This function checks if the full inventory is a superset of the partial inventory.\n    It means that the full inventory should contain all items and possibly more\n    compared to the partial inventory.\n    \"\"\"\n    return full_inventory.issuperset(partial_inventory)\n\ndef display_inventory_items(inventory):\n    \"\"\"\n    This function prints out the items in the inventory along with their quantities.\n    \"\"\"\n    for item, quantity in inventory.items():\n        print(f\"Item: {item}, Quantity: {quantity}\")\n\n# Example inventories\nfull_inventory = {'apples': 50, 'bananas': 30, 'oranges': 20}\npartial_inventory = {'apples': 20, 'bananas': 15}\n\n# Convert inventory dictionaries to sets\nfull_inventory_set = set(full_inventory)\npartial_inventory_set = set(partial_inventory)\n\n# Check if the full inventory is a superset of the partial inventory\ninventory_check = check_inventory_superset(full_inventory_set, partial_inventory_set)\n\nprint(\"Full inventory contains all items from partial inventory:\", inventory_check)\n\n# Display the items in the full inventory\ndisplay_inventory_items(full_inventory)\n",
+    "output": "Full inventory contains all items from partial inventory: True\nItem: apples, Quantity: 50\nItem: bananas, Quantity: 30\nItem: oranges, Quantity: 20",
+    "tags": [
+        "issuperset",
+        "items",
+        "Medium"
+    ]
+}

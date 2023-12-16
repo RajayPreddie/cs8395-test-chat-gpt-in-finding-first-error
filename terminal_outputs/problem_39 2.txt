@@ -1,0 +1,2 @@
+The average of the numbers is: 30.0
+The average of the numbers is: 25.0

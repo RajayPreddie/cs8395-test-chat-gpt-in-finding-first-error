@@ -1,0 +1,11 @@
+{
+    "id": "problem_98",
+    "code": "\nimport asyncio\n\n# Function to convert list of strings to uppercase\nasync def to_uppercase(items):\n    return [item.upper() for item in items]\n\n# Asynchronous main function to demonstrate usage of to_uppercase\nasync def main():\n    original_list = ['python', 'asyncio', 'upper', 'list']\n    uppercase_list = await to_uppercase(original_list)\n    print(\"Original List:\", original_list)\n    print(\"Uppercase List:\", uppercase_list)\n\n# Function to create a list of strings with a typo\ndef create_typo_list():\n    typo_list = ['Pyhton', 'Asynico', 'Uppar', 'Lits']\n    return typo_list\n\n# Run the main function using asyncio\nif __name__ == \"__main__\":\n    asyncio.run(main())\n\n    # Introduce a typo in the list and try to convert it to uppercase\n    typo_list = create_typo_list()\n    # This line contains an error, as to_uppercase is an async function and should be awaited\n    typo_uppercase_list = to_uppercase(typo_list)\n    print(\"Typo List:\", typo_list)\n    print(\"Typo Uppercase List:\", typo_uppercase_list)\n",
+    "output": "Original List: ['python', 'asyncio', 'upper', 'list']\nUppercase List: ['PYTHON', 'ASYNCIO', 'UPPER', 'LIST']\nTraceback (most recent call last):\n  File \"<stdin>\", line 24, in <module>\nTypeError:",
+    "tags": [
+        "upper",
+        "list",
+        "asyncio",
+        "Hard"
+    ]
+}

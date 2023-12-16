@@ -1,0 +1,9 @@
+{
+    "id": "problem_12",
+    "code": "\nfrom collections import defaultdict\n\n# Function to categorize words by their first letter\ndef categorize_words(word_list):\n    categories = defaultdict(list)\n    for word in word_list:\n        # Intentional error: Using '0' (zero) instead of 'o' in 'word'\n        initial = w0rd[0].lower()\n        categories[initial].append(word)\n    return categories\n\n# A list of words to be categorized\nwords = ['apple', 'banana', 'grape', 'avocado', 'blueberry', 'cherry']\n\n# Categorize the words and print the result\nword_categories = categorize_words(words)\nfor initial, words in word_categories.items():\n    print(f\"Words starting with '{initial}': {words}\")\n\n# A function to demonstrate defaultdict behavior with integers\ndef add_scores(score_dict, name, score):\n    score_dict[name] += score\n    return score_dict\n\n# Initialize a defaultdict with default type of int\nplayer_scores = defaultdict(int)\n\n# Add scores for players\nplayer_scores = add_scores(player_scores, 'Alice', 10)\nplayer_scores = add_scores(player_scores, 'Bob', 20)\nplayer_scores = add_scores(player_scores, 'Charlie', 15)\n\n# Print the scores\nprint(\"Player scores:\")\nfor player, score in player_scores.items():\n    print(f\"{player}: {score}\")\n",
+    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 13, in <module>\n  File \"<stdin>\", line 7, in categorize_words\nNameError: name 'w0rd' is not defined\n",
+    "tags": [
+        "DefaultDict",
+        "Easy"
+    ]
+}
