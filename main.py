@@ -157,10 +157,7 @@ def execute_python_code_from_directory(problem_descriptions, gpt_responses):
 parser = argparse.ArgumentParser(description='Get ChatGPT responses and write to files.')
 parser.add_argument('--generate_responses', action='store_true',
                     help='Force generation of ChatGPT responses')
-# TODO: if generate is on then generate everything 
-# Check if gpt responses exist
-# TODO: if no generate then check if the directory exists and if it does then don't regenerate
-# Check if json_problem_scores exists
+parser.add_argument("--model", type=str, default="gpt-4", help="The model to use for generating responses.")
 args = parser.parse_args()
 
 #
