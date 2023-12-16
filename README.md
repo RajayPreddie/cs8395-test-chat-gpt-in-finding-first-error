@@ -52,3 +52,7 @@ The `main.py` script supports the following command-line arguments:
   python main.py --generate_responses
   ```
 - `-- model`: This is here for integrating with the [cs8395/test-suite](https://github.com/nkalupahana/cs8395-test-suite). The input model is not used. The repository utilizes gpt-4.
+
+## ChatGPT Chat Links:
+1. [ChatLink](https://chat.openai.com/share/9c43608f-52d8-4415-8203-57a693547093)
+2. [ChatLink] (https://chat.openai.com/share/cbfa536a-aa16-4024-b7df-bf2bf43df448)
