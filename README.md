@@ -70,6 +70,9 @@ Contributions to the project are welcome. Please follow the existing code struct
 The inspiration for the methodology diffculty levels comes from one of the research 
 presentations I viewed in CS8395.
 
+The following repository of mine helped with the development of this code: 
+1. [ChatGPT Python Code Execution Comparison](https://github.com/RajayPreddie/cs8395-chatgpt-python-code-execution-comparison)
+
 ## ChatGPT Chat Links:
 1. [ChatLink](https://chat.openai.com/share/9c43608f-52d8-4415-8203-57a693547093)
 2. [ChatLink] (https://chat.openai.com/share/cbfa536a-aa16-4024-b7df-bf2bf43df448)
