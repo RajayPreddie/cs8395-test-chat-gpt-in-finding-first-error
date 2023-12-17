@@ -1,9 +1,0 @@
-The fruit apple appears 2 times.
-The fruit banana appears 1 times.
-The fruit cherry appears 3 times.
-The letter p appears 3 times.
-The letter i appears 1 times.
-The letter n appears 1 times.
-The letter e appears 2 times.
-The letter a appears 1 times.
-The letter l appears 1 times.

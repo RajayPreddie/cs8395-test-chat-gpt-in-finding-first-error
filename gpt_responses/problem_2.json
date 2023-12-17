@@ -1,7 +1,7 @@
 {
     "id": "problem_2",
     "code": "\nimport asyncio\n\nasync def fetch_data():\n    print(\"Fetching data...\")\n    # Simulating a network call with asyncio.sleep\n    await asyncio.sleep(1)\n    print(\"Data fetched successfully.\")\n    return {'data': 123}\n\nasync def process_data():\n    print(\"Processing data...\")\n    data = await fetch_data()\n    if data['data'] > 100:\n        processed_data = data['data'] + 1\n    else:\n        # Intentional error: KeyError will occur because 'result' is not a key in the 'data' dictionary\n        processed_data = data['result'] * 2\n    print(f\"Processed data: {processed_data}\")\n\nasync def main():\n    await process_data()\n\n# Run the main function using asyncio\nasyncio.run(main())\n",
-    "output": "Fetching data...\nData fetched successfully.\nProcessing data...\nTraceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\n  File \"<stdin>\", line 9, in process_data\nKeyError: 'result'",
+    "output": "Fetching data...\nData fetched successfully.\nProcessing data...\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line 5, in main\n  File \"<stdin>\", line 9, in process_data\nKeyError: '",
     "tags": [
         "asyncio",
         "Easy"

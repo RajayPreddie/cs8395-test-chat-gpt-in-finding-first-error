@@ -1,2 +1,0 @@
-Sorted by length: can Sorting strings startle someone sometimes
-Words starting with 's': ['strings', 'sometimes', 'startle', 'someone']

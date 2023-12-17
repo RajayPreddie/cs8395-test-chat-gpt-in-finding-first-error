@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "<string>", line 10, in <module>
-  File "<string>", line 7, in factorial
-  File "<string>", line 7, in factorial
-  File "<string>", line 7, in factorial
-  [Previous line repeated 995 more times]
-  File "<string>", line 4, in factorial
-RecursionError: maximum recursion depth exceeded in comparison

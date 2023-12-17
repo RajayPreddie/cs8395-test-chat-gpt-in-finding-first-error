@@ -1,9 +1,0 @@
-{
-    "id": "problem_27",
-    "code": "\n# Define a metaclass to customize class creation\nclass CustomMeta(type):\n    def __new__(cls, name, bases, dct):\n        # Add a custom attribute to the class\n        dct['custom_attr'] = 'This is a custom attribute'\n        return super().__new__(cls, name, bases, dct)\n\n# Use the metaclass to create a new class\nclass MyClass(metaclass=CustomMeta):\n    def method(self):\n        print(\"This is a method of MyClass.\")\n\n# Instantiate the class\nmy_instance = MyClass()\n\n# Call the method of the class\nmy_instance.method()\n\n# Print the custom attribute added by the metaclass\nprint(my_instance.custom_att)  # Intentional error: should be custom_attr\n",
-    "output": "This is a method of MyClass.\nTraceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAttributeError: 'MyClass' object has no attribute 'custom_att'",
-    "tags": [
-        "Metaclass",
-        "Easy"
-    ]
-}

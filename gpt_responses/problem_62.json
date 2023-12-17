@@ -1,7 +1,7 @@
 {
     "id": "problem_62",
     "code": "\ndef find_common_elements(sets):\n    if not sets:\n        return set()\n    \n    common_elements = sets[0]\n    for s in sets[1:]:\n        common_elements = common_elements.intersection(s)\n    \n    return common_elements\n\ndef check_subsets(main_set, subsets):\n    for subset in subsets:\n        if not subset.issubset(main_set):\n            return False\n    return True\n\n# Example sets to demonstrate functionality\nset_a = {1, 2, 3, 4, 5}\nset_b = {4, 5, 6}\nset_c = {5, 6, 7, 8}\n\n# Find the intersection of multiple sets\ncommon = find_common_elements([set_a, set_b, set_c])\nprint(\"Common elements:\", common)\n\n# Check if a set is a subset of another\nmain_set = {1, 2, 3, 4, 5, 6, 7, 8, 9}\nsubsets = [{4, 5}, {6, 7, 8}]\nis_subset = check_subsets(main_set, subsets)\nprint(\"All subsets:\", is_subset)\n\n# Intentional error: 'subsets' should be a list of sets, not a list of lists\nsubsets_with_error = [[4, 5], [6, 7, 8]]\nis_subset_error = check_subsets(main_set, subsets_with_error)\nprint(\"All subsets with error:\", is_subset_error)\n",
-    "output": "Common elements: {5}\nAll subsets: True\nTraceback (most recent call last):\n  File \"<stdin>\", line 30, in <module>\n  File \"<stdin>\", line 12, in check_subsets\nAttributeError: 'list' object has no attribute 'issubset",
+    "output": "Common elements: {5}\nAll subsets: True\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\n  File \"<stdin>\", line 2, in check_subsets\nAttributeError: 'list' object has no attribute 'issubset",
     "tags": [
         "intersection",
         "issubset",

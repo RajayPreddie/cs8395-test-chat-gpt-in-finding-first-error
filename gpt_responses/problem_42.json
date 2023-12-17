@@ -1,7 +1,7 @@
 {
     "id": "problem_42",
     "code": "\ndef add_to_list(initial_list, number_to_add):\n    # This function takes a list and a number to add to each element of the list\n    new_list = []\n    for i in initial_list:\n        new_value = i + number_to_add\n        new_list.append(new_value)\n    return new_list\n\ndef main():\n    # Main function that uses add_to_list to add 5 to each element of the list\n    my_numbers = [1, 2, 3, 4]\n    updated_numbers = add_to_list(my_numbers, 5)\n    print(\"Original numbers:\", my_numbers)\n    print(\"Numbers after adding 5:\", updated_numbers)\n\n    # Now let's add a string to the list, which should cause an error\n    my_numbers.append(\"six\")\n    another_update = add_to_list(my_numbers, 5)\n    print(\"Numbers after adding 5 again:\", another_update)\n\nif __name__ == \"__main__\":\n    main()\n",
-    "output": "Original numbers: [1, 2, 3, 4]\nNumbers after adding 5: [6, 7, 8, 9]\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"<stdin>\", line",
+    "output": "Original numbers: [1, 2, 3, 4]\nNumbers after adding 5: [6, 7, 8, 9]\nTraceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\n  File \"<stdin>\", line",
     "tags": [
         "add",
         "Easy"

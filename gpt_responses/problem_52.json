@@ -1,7 +1,7 @@
 {
     "id": "problem_52",
     "code": "\n# This program checks if a list of file names have the correct extension for a Django project.\n# It will print out the file names that do not end with the correct '.py' extension.\n\n# List of file names in a Django project\ndjango_files = ['views.py', 'models.py', 'tests.py', 'urls.txt', 'admin.py', 'apps.py']\n\n# Function to check if files end with '.py'\ndef check_file_extensions(file_list):\n    incorrect_files = []\n    for file in file_list:\n        if not file.endwith('.py'):  # Intentional error: should be endswith\n            incorrect_files.append(file)\n    return incorrect_files\n\n# Check the Django files for correct extension\nincorrect_file_list = check_file_extensions(django_files)\n\n# Print the files with incorrect extensions\nprint(\"Files with incorrect extension:\", incorrect_file_list)\n",
-    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\n  File \"<stdin>\", line 10, in check_file_extensions\nAttributeError: 'str' object has no attribute 'endwith'",
+    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 17, in <module>\n  File \"<stdin>\", line 11, in check_file_extensions\nAttributeError: 'str' object has no attribute 'endwith'",
     "tags": [
         "django",
         "endswith",

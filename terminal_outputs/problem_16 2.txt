@@ -1,2 +1,0 @@
-The sum of unique numbers is: 21
-Unique fruits: frozenset({'banana', 'apple', 'cherry'})

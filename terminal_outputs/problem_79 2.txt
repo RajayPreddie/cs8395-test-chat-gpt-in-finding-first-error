@@ -1,2 +1,0 @@
-Generated random string: sr8iox1fyg
-Extracted numbers from the string: ['8', '1']

@@ -1,3 +1,0 @@
-Unique elements from both lists: {1, 2, 3, 4, 5, 6, 7, 8}
-Common elements from both lists: {4, 5}
-Symmetric difference of both lists: {1, 2, 3, 6, 7, 8}

@@ -1,9 +1,0 @@
-{
-    "id": "problem_28",
-    "code": "\n# Define a class to represent a primate\nclass Primate:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        print(f\"{self.name} says 'Ooo Ooo Aaa Aaa'\")\n\n# Define a function to patch the speak method of Primate\ndef monkey_patching(primate_instance):\n    def new_speak():\n        print(f\"{primate_instance.name} has learned human language!\")\n    primate_instance.speak = new_speak\n\n# Create a primate instance\ngeorge = Primate(\"George\")\n\n# Original speak behavior\ngeorge.speak()\n\n# Apply monkey patching to change the behavior\nmonkey_patching(george)\n\n# New speak behavior\ngeorge.speak()\n\n# Introduce an intentional error: a typo in the attribute name\ndef introduce_error(primate_instance):\n    primate_instance.nme = \"Curious George\"\n\n# Apply the erroneous function\nintroduce_error(george)\n\n# Attempt to print the primate's name (will raise an AttributeError due to the typo)\nprint(george.name)\n",
-    "output": "George says 'Ooo Ooo Aaa Aaa'\nGeorge has learned human language!\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nAttributeError: 'Primate' object has no attribute 'nme'",
-    "tags": [
-        "MonkeyPatching",
-        "Easy"
-    ]
-}

@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "<string>", line 20, in <module>
-  File "<string>", line 16, in generate_prime_numbers
-AttributeError: 'list' object has no attribute 'appen'

@@ -1,2 +1,2 @@
 Square values: [1, 4, 9, 16, 25]
-Unique words: {'is', 'list', 'powerful.', 'great', 'comprehension!', 'Comprehension', 'Python', 'for'}
+Unique words: {'list', 'great', 'Comprehension', 'for', 'is', 'powerful.', 'Python', 'comprehension!'}

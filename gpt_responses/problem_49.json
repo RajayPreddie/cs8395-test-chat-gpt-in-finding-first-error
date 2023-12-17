@@ -1,7 +1,7 @@
 {
     "id": "problem_49",
     "code": "\nfrom datetime import datetime, timedelta\n\ndef print_next_week_dates():\n    # This function prints the dates of the next 7 days from today\n    today = datetime.now()\n    for i in range(7):\n        next_day = today + timedelta(days=i)\n        print(\"Next day:\", next_day.strftime(\"%Y-%m-%d\"))\n\ndef calculate_days_until_new_year():\n    # This function calculates the number of days until New Year's Day\n    today = datetime.now()\n    new_year = datetime(today.year + 1, 1, 1)\n    delta = new_year - today\n    print(\"Days until New Year's Day:\", delta.days)\n\ndef print_current_time():\n    # This function prints the current time\n    now = datetime.now()\n    print(\"Current time:\", now.strftime(\"%H:%M:%S\"))\n\n# Call the functions\nprint_next_week_dates()\ncalculate_days_until_new_year()\nprint_current_time()\n",
-    "output": "Next day: 2022-09-30\nNext day: 2022-10-01\nNext day: 2022-10-02\nNext day: 2022-10-03\nNext day: 2022-10-04\nNext day: 202",
+    "output": "Next day: 2022-09-28\nNext day: 2022-09-29\nNext day: 2022-09-30\nNext day: 2022-10-01\nNext day: 2022-10-02\nNext day: 202",
     "tags": [
         "datetime",
         "Easy"

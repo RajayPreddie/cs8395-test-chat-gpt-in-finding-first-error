@@ -1,1 +1,0 @@
-The differences between the lists are: [9, 18, 27, 36]

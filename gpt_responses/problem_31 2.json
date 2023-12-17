@@ -1,9 +1,0 @@
-{
-    "id": "problem_31",
-    "code": "\nfrom collections import OrderedDict\n\ndef create_ordered_dict(pairs):\n    # This function creates an ordered dictionary from a list of pairs\n    ordered_dict = OrderedDict(pairs)\n    return ordered_dict\n\ndef add_new_pair(ordered_dict, key, value):\n    # Adds a new key-value pair to the ordered dictionary\n    ordered_dict[key] = value\n\ndef display_ordered_dict(ordered_dict):\n    # Displays the ordered dictionary\n    for key, value in ordered_dict.items():\n        print(f\"{key}: {value}\")\n\n# Example usage of the functions\nif __name__ == \"__main__\":\n    # Define a list of pairs to be added to the ordered dictionary\n    initial_pairs = [(\"apple\", 1), (\"banana\", 2), (\"cherry\", 3)]\n\n    # Create an ordered dictionary\n    my_ordered_dict = create_ordered_dict(initial_pairs)\n\n    # Add a new pair to the ordered dictionary\n    add_new_pair(my_ordered_dict, \"date\", 4)\n\n    # Display the ordered dictionary\n    display_ordered_dict(my_ordered_dict)\n\n    # Introduce an intentional error: attempting to add a duplicate key\n    # This will not create an infinite loop or recursion, but will overwrite the existing key\n    add_new_pair(my_ordered_dict, \"apple\", 5)\n\n    # Display the ordered dictionary again to see the effect of the error\n    display_ordered_dict(my_ordered_dict)\n",
-    "output": "apple: 1\nbanana: 2\ncherry: 3\ndate: 4\napple: 5\nbanana: 2\ncherry: 3\ndate: 4",
-    "tags": [
-        "OrderedDict",
-        "Easy"
-    ]
-}

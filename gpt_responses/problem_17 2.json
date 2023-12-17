@@ -1,9 +1,0 @@
-{
-    "id": "problem_17",
-    "code": "\nclass GarbageManager:\n    def __init__(self):\n        self.garbage_items = []\n\n    def add_garbage(self, item):\n        self.garbage_items.append(item)\n    \n    def list_garbage(self):\n        for item in self.garbage_items:\n            print(item)\n    \n    def collect_garbage(self):\n        self.garbage_items = []\n        print(\"Garbage collected successfully.\")\n\n    def dispose_garbage(self, item):\n        if item in self.garbage_items:\n            self.garbage_items.remove(item)\n        else:\n            print(\"Item not found in garbage.\")\n\n# Simulate garbage collection process\ngarbage_manager = GarbageManager()\ngarbage_manager.add_garbage(\"apple_core\")\ngarbage_manager.add_garbage(\"banana_peel\")\ngarbage_manager.add_garbage(\"used_napkin\")\ngarbage_manager.add_garbage(\"empty_bottle\")\n\n# List all the garbage items\ngarbage_manager.list_garbage()\n\n# Dispose of a specific garbage item\ngarbage_manager.dispose_garbage(\"used_napkin\")\n\n# List remaining garbage items\ngarbage_manager.list_garbage()\n\n# Collect all garbage\ngarbage_manager.collect_garbage()\n\n# Attempt to dispose garbage that has already been collected\ngarbage_manager.dispose_garbage(\"apple_core\")\n",
-    "output": "apple_core\nbanana_peel\nused_napkin\nempty_bottle\napple_core\nbanana_peel\nempty_bottle\nGarbage collected successfully.\nItem not found in garbage.",
-    "tags": [
-        "GarbageCollection",
-        "Easy"
-    ]
-}

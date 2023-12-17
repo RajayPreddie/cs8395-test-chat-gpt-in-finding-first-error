@@ -1,9 +1,0 @@
-{
-    "id": "problem_50",
-    "code": "\ndef calculate_difference(list_a, list_b):\n    \"\"\"\n    This function takes two lists of numbers and returns a list of differences.\n    For each element in list_a, it finds the corresponding element in list_b and calculates the difference.\n    If an element is not found in list_b, it is ignored.\n    \"\"\"\n    differences = []\n    for i in range(len(list_a)):\n        # Find the difference between the corresponding elements of list_a and list_b\n        differences.append(list_a[i] - list_b[i])\n    return differences\n\n# Example lists\nlist_one = [10, 20, 30, 40]\nlist_two = [1, 2, 3, 4]\n\n# Calculate the differences\nresulting_differences = calculate_difference(list_one, list_two)\n\n# Print the results\nprint(\"The differences between the lists are:\", resulting_differences)\n",
-    "output": "The differences between the lists are: [9, 18, 27, 36]",
-    "tags": [
-        "difference",
-        "Easy"
-    ]
-}

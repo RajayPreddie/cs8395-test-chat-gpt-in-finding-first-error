@@ -1,2 +1,0 @@
-Set A is a subset of Set B.
-Set B is a superset of Set A.

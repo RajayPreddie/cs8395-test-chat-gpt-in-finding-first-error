@@ -1,7 +1,7 @@
 {
     "id": "problem_89",
     "code": "\ndef sort_string_by_word_length(input_string):\n    # This function sorts the words in a string by their length\n    words = input_string.split()\n    sorted_words = sorted(words, key=len)\n    return ' '.join(sorted_words)\n\ndef filter_words_starting_with_s(input_string):\n    # This function filters words that start with 's' and returns them as a list\n    words = input_string.split()\n    s_words = [word for word in words if word.startswith('s')]\n    return s_words\n\n# Example usage of the functions\nexample_string = \"Sorting strings can sometimes startle someone\"\n\n# Sort the words in the example string by their length\nsorted_string = sort_string_by_word_length(example_string)\nprint(\"Sorted by length:\", sorted_string)\n\n# Get all words that start with 's'\nwords_starting_with_s = filter_words_starting_with_s(example_string)\nprint(\"Words starting with 's':\", words_starting_with_s)\n\n# Intentional Error: The following line has an error since 'sorted_strig' is not defined.\n# The correct variable name is 'sorted_string'.\nprint(\"This should print the sorted string:\", sorted_strig)\n",
-    "output": "Sorted by length: s can strings Sorting someone startle sometimes\nWords starting with 's': ['Sorting', 'strings', 'sometimes', 'startle', 'someone']\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nNameError: name",
+    "output": "Sorted by length: s can Sorting strings startle someone sometimes\nWords starting with 's': ['Sorting', 'strings', 'sometimes', 'startle', 'someone']\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nNameError: name",
     "tags": [
         "sort",
         "split",

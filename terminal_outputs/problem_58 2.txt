@@ -1,6 +1,0 @@
-Item grape not found in inventory.
-Current inventory counts:
-apple: 10
-banana: 5
-orange: 0
-Count of oranges: Item not found in inventory.

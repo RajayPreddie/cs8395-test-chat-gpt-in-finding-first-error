@@ -1,9 +1,0 @@
-{
-    "id": "problem_29",
-    "code": "\nfrom collections import namedtuple\n\n# Define a named tuple for storing book information\nBook = namedtuple('Book', ['title', 'author', 'year_published'])\n\n# Create a list of books using the Book named tuple\nlibrary = [\n    Book(title='To Kill a Mockingbird', author='Harper Lee', year_published=1960),\n    Book(title='1984', author='George Orwell', year_published=1949),\n    Book(title='The Great Gatsby', author='F. Scott Fitzgerald', year_published=1925)\n]\n\ndef find_book_by_title(book_title):\n    \"\"\"Search for a book in the library by its title.\"\"\"\n    for book in library:\n        if book.title == book_title:\n            return book\n    # Intentional error: misspelled 'raise' as 'raize'\n    raize ValueError(f'Book with title {book_title} not found.')\n\n# Example usage of the find_book_by_title function\ntry:\n    print(find_book_by_title('The Catcher in the Rye'))\nexcept ValueError as e:\n    print(e)\n",
-    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\n  File \"<stdin>\", line 18, in find_book_by_title\nNameError: name 'raize' is not defined",
-    "tags": [
-        "NamedTuple",
-        "Easy"
-    ]
-}

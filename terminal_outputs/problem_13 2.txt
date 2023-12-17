@@ -1,1 +1,0 @@
-Sending email to user@example.com: Notification - Welcome to our service!

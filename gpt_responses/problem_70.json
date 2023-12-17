@@ -1,7 +1,7 @@
 {
     "id": "problem_70",
     "code": "\nimport matplotlib.pyplot as plt\nimport math\n\ndef plot_sine_wave(amplitude, frequency):\n    # Generates and plots a sine wave based on the given amplitude and frequency\n    x_values = [i for i in range(100)]\n    y_values = [amplitude * math.sin(frequency * x) for x in x_values]\n    plt.plot(x_values, y_values)\n    plt.title('Sine Wave')\n    plt.xlabel('Angle [radians]')\n    plt.ylabel('Amplitude')\n    plt.show()\n\ndef calculate_factorial(number):\n    # Calculates the factorial of a given number\n    if number == 0:\n        return 1\n    else:\n        return number * calculate_factorial(number) # Intentional error: missing decrement of number\n\n# Plotting a sine wave\nplot_sine_wave(1, 0.1)\n\n# Calculating and printing the factorial of 5\nprint(f\"The factorial of 5 is {calculate_factorial(5)}\")\n",
-    "output": "<Figure size 640x480 with 1 Axes>\nRecursionError: maximum recursion depth exceeded in comparison",
+    "output": "The graph of the function y=sin(x) is displayed.\n\nTraceback (most recent call last):\n  File \"<stdin>\", line 23, in <module>\n  File \"<stdin>\", line 18, in calculate_factorial\n  File \"<stdin>\", line 18, in calculate_factor",
     "tags": [
         "math",
         "matplotlib",

@@ -1,9 +1,0 @@
-{
-    "id": "problem_35",
-    "code": "\nimport json\n\n# Define a simple class to represent a user\nclass User:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    # Method to serialize the user object to JSON\n    def to_json(self):\n        return json.dumps(self.__dict__)\n\n    # Method to create a User object from a JSON string\n    @staticmethod\n    def from_json(json_str):\n        data = json.loads(json_str)\n        return User(data['name'], data['age'])\n\n# Create a new user object\nuser = User(\"John Doe\", 30)\n\n# Serialize the user object to JSON\nuser_json = user.to_json()\n\n# Print the serialized user\nprint(\"Serialized user:\", user_json)\n\n# Deserialize the JSON back to a User object\nnew_user = User.from_json(user_json)\n\n# Print the deserialized user's details\nprint(\"Deserialized user:\", new_user.name, new_user.age)\n\n# Intentional Error: Attempt to serialize a non-serializable object (set)\ndef serialize_set():\n    sample_set = {1, 2, 3}\n    return json.dumps(sample_set)\n\n# Call the function that causes an error\nserialize_set()\n",
-    "output": "Serialized user: {\"name\": \"John Doe\", \"age\": 30}\nDeserialized user: John Doe 30\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\n  File \"/usr/lib/python3.6/json/__init__.py",
-    "tags": [
-        "Serialization",
-        "Easy"
-    ]
-}

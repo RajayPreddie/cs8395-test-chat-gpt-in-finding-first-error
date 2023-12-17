@@ -1,7 +1,7 @@
 {
     "id": "problem_51",
     "code": "\nfrom django.core.management import BaseCommand\n\nclass Command(BaseCommand):\n    help = 'Purges expired sessions from the database'\n\n    def handle(self, *args, **options):\n        try:\n            self.stdout.write(\"Starting to discard expired sessions.\")\n            self.discard_expired_sessions()\n            self.stdout.write(\"Successfully discarded expired sessions.\")\n        except Exception as e:\n            self.stdout.write(f\"An error occurred: {e}\")\n\n    def discard_expired_sessions(self):\n        from django.contrib.sessions.models import Session\n        from django.utils import timezone\n\n        # Delete sessions that have expired\n        expired_sessions = Session.objects.filter(expire_date__lt=timezone.now())\n        count = expired_sessions.delete()\n        return count\n\n# Simulate calling the command if this file is run directly\nif __name__ == \"__main__\":\n    # Create an instance of the command\n    cmd = Command()\n    # Call the handle method to simulate what Django does\n    cmd.handle()\n",
-    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\nModuleNotFoundError: No module named 'django'",
+    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nModuleNotFoundError: No module named 'django'",
     "tags": [
         "discard",
         "django",

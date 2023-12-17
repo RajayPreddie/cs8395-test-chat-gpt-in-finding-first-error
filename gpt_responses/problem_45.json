@@ -1,7 +1,7 @@
 {
     "id": "problem_45",
     "code": "\ndef clear_list_contents(lst):\n    # Function to clear all the elements of a list\n    while len(lst) > 0:\n        lst.pop()\n\ndef display_list(lst):\n    # Function to display the contents of a list\n    for item in lst:\n        print(item)\n\n# Main program starts here\nmy_list = [1, 2, 3, 4, 5]\nclear_list_contents(my_list)\n\n# Display the list after clearing its contents\ndisplay_list(my_list)\n\n# Intentional Error: The following line tries to access an index that no longer exists\nprint(\"First element after clearing:\", my_list[0])\n",
-    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 19, in <module>\nIndexError: list index out of range",
+    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nIndexError: list index out of range",
     "tags": [
         "clear",
         "Easy"

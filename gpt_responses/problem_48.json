@@ -1,7 +1,7 @@
 {
     "id": "problem_48",
     "code": "\ndef count_occurrences(word, letter):\n    # This function counts the number of times a letter appears in a word\n    count = 0\n    for char in word:\n        if char == letter:\n            count += 1\n    return count\n\n# Let's count how many times the letter 'a' appears in the word 'banana'\nword_to_check = 'banana'\nletter_to_count = 'a'\noccurrences = count_occurrences(word_to_check, letter_to_count)\n\nprint(f\"The letter '{letter_to_count}' appears in '{word_to_check}' {occurrences} times.\")\n\n# Now let's count the occurrences of each letter in the word\ndef count_all_letters(word):\n    letter_counts = {}\n    for letter in word:\n        if letter in letter_counts:\n            letter_counts[letter] += 1\n        else:\n            letter_counts[letter] = 1\n    return letter_counts\n\nall_letter_counts = count_all_letters(word_to_check)\n\n# Print the count for each letter\nfor letter, count in all_letter_counts.items():\n    print(f\"Letter '{letter}' appears {count} times.\")\n\n# Intentional error: misspelling the variable name\n# The following line contains an error, it should be 'all_letter_counts'\nprint(\"Total distinct letters counted:\", len(all_letters_counts))\n",
-    "output": "The letter 'a' appears in 'banana' 3 times.\nLetter 'b' appears 1 times.\nLetter 'a' appears 3 times.\nLetter 'n' appears 2 times.\nTraceback (most recent call last):\n  File \"<stdin>\", line 31, in <",
+    "output": "The letter 'a' appears in 'banana' 3 times.\nLetter 'b' appears 1 times.\nLetter 'a' appears 3 times.\nLetter 'n' appears 2 times.\nTraceback (most recent call last):\n  File \"<stdin>\", line 28, in <",
     "tags": [
         "count",
         "Easy"

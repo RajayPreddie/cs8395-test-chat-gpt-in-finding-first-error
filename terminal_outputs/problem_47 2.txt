@@ -1,3 +1,0 @@
-Starting backup process...
-An error occurred: [Errno 2] No such file or directory: 'important_data.txt'
-Backup process completed.

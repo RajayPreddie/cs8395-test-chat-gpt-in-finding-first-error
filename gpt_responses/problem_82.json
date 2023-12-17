@@ -1,7 +1,7 @@
 {
     "id": "problem_82",
     "code": "\nimport requests\n\ndef reverse_string(s):\n    # This function reverses the input string\n    return s[::-1]\n\ndef replace_substring(s, old, new):\n    # This function replaces old substring with new in string s\n    return s.replace(old, new)\n\ndef fetch_quote():\n    # Fetches a random quote from an API and reverses it\n    response = requests.get(\"https://api.quotable.io/random\")\n    quote_data = response.json()\n    return reverse_string(quote_data['content'])\n\ndef main():\n    quote = fetch_quote()\n    print(\"Original Quote (Reversed):\", quote)\n    correct_quote = replace_substring(quote, ' ', ' ')\n    print(\"Corrected Quote:\", correct_quote)\n\nif __name__ == \"__main__\":\n    main()\n",
-    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nModuleNotFoundError: No module named 'requests'",
+    "output": "ModuleNotFoundError: No module named 'requests'",
     "tags": [
         "replace",
         "requests",

@@ -1,3 +1,0 @@
-Sending data...
-Data sent: bytearray(b'Hello, World!')
-Response received: b'Acknowledgement: Data received'

@@ -1,4 +1,0 @@
-Original List: ['python', 'asyncio', 'upper', 'list']
-Uppercase List: ['PYTHON', 'ASYNCIO', 'UPPER', 'LIST']
-Typo List: ['Pyhton', 'Asynico', 'Uppar', 'Lits']
-Typo Uppercase List: <coroutine object to_uppercase at 0x102a9a540>

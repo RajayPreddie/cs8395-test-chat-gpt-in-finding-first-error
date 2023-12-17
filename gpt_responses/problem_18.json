@@ -1,7 +1,7 @@
 {
     "id": "problem_18",
     "code": "\ndef fibonacci_generator(limit):\n    \"\"\"Generate Fibonacci sequence up to a limit\"\"\"\n    a, b = 0, 1\n    while a < limit:\n        yield a\n        a, b = b, a + b\n\ndef print_fibonacci_sequence(limit):\n    \"\"\"Prints out the Fibonacci sequence up to a given limit\"\"\"\n    fib_sequence = fibonacci_generator(limit)\n    for number in fib_sequence:\n        print(number)\n\n# Set a limit for the Fibonacci sequence\nfib_limit = 10\n\n# Print the Fibonacci sequence up to the limit\nprint_fibonacci_sequence(fib_limit)\n\n# Intentional Error: The function below is supposed to calculate the sum of Fibonacci numbers\n# up to a certain limit, but it contains an error.\ndef fibonacci_sum(limit):\n    fib_sequence = fibonacci_generator(limit)\n    total_sum = 0\n    for number in fib_sequence:\n        total_sum += number\n    return total\n\n# Calculate and print the sum of Fibonacci numbers up to the limit\nfib_sum = fibonacci_sum(fib_limit)\nprint(f\"Sum of Fibonacci numbers up to {fib_limit}: {fib_sum}\")\n",
-    "output": "0\n1\n1\n2\n3\n5\n8\nTraceback (most recent call last):\n  File \"<stdin>\", line 28, in <module>\n  File \"<stdin>\", line 23, in fibonacci_sum\nNameError: name 'total' is not defined",
+    "output": "0\n1\n1\n2\n3\n5\n8\nTraceback (most recent call last):\n  File \"<stdin>\", line 27, in <module>\nNameError: name 'total' is not defined",
     "tags": [
         "Generator",
         "Easy"

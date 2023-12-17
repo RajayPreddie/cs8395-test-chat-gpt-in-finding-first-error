@@ -1,7 +1,7 @@
 {
     "id": "problem_53",
     "code": "\ndef check_file_extension(file_list, extension):\n    # This function checks if files in the list end with the given extension\n    return [file for file in file_list if file.endswith(extension)]\n\ndef extend_file_list(file_list, additional_files):\n    # This function extends the file list with additional files\n    file_list.extend(additional_files)\n    return file_list\n\n# Example usage\nfiles = ['report.docx', 'image.png', 'notes.txt']\nnew_files = ['summary.docx', 'graph.pdf']\ndesired_extension = '.docx'\n\n# Extend the file list with new files\nfiles = extend_file_list(files, new_files)\n\n# Check for files with the desired extension\ndocx_files = check_file_extension(files, desired_extension)\nprint(\"Files with the desired extension:\", docx_files)\n\n# Intentionally introduce an error: misspelling the function name\n# The error is subtle as it looks like a typical function call\ndocx_files = chek_file_extension(files, desired_extension)\nprint(\"Files with the desired extension after error:\", docx_files)\n",
-    "output": "Files with the desired extension: ['report.docx', 'summary.docx']\nTraceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\nNameError: name 'chek_file_extension' is not defined",
+    "output": "Files with the desired extension: ['report.docx', 'summary.docx']\nTraceback (most recent call last):\n  File \"<stdin>\", line 16, in <module>\nNameError: name 'chek_file_extension' is not defined",
     "tags": [
         "endswith",
         "extend",

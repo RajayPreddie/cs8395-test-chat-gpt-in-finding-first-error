@@ -1,9 +1,0 @@
-{
-    "id": "problem_46",
-    "code": "\nfrom collections import Counter\n\ndef count_unique_elements(data_list):\n    # This function counts the unique elements in a list using collections.Counter\n    count = Counter(data_list)\n    return count\n\ndef main():\n    # Example usage of count_unique_elements function\n    items = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']\n    unique_counts = count_unique_elements(items)\n    \n    # Print the count of each unique item\n    for item, count in unique_counts.items():\n        print(f\"{item}: {count}\")\n\n    # Introduce an error: misspelling the variable name\n    print(\"Total unique items:\", len(unique_cunts))\n\nif __name__ == \"__main__\":\n    main()\n",
-    "output": "Counter({'apple': 3, 'banana': 2, 'orange': 1})\nTotal unique items: \nTraceback (most recent call last):\n  File \"<stdin>\", line 19, in <module>\n  File \"<stdin>\", line 16, in main\nNameError:",
-    "tags": [
-        "collections",
-        "Easy"
-    ]
-}

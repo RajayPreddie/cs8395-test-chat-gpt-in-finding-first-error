@@ -1,1 +1,0 @@
-Files with the desired extension: ['report.docx', 'summary.docx']

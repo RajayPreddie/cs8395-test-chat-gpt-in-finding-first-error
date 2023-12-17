@@ -1,7 +1,7 @@
 {
     "id": "problem_100",
     "code": "\nimport asyncio\n\nasync def main():\n    data = \"Hello, World!\"\n    encoded_data = data.encode('utf-8')  # Convert string to bytes\n    byte_array = bytearray(encoded_data)  # Convert bytes to bytearray for manipulation\n\n    # Simulate a network operation to send data\n    await send_data(byte_array)\n\nasync def send_data(data):\n    # Simulate sending data over a network\n    print(\"Sending data...\")\n    await asyncio.sleep(1)  # Simulate network delay\n    print(\"Data sent:\", data)\n\n    # Simulate a response from the network\n    response = receive_data()\n    print(\"Response received:\", response)\n\ndef receive_data():\n    # Simulate receiving data from the network\n    # Intentional error: should be 'await asyncio.sleep(1)'\n    asyncio.sleep(1)  # This will not actually sleep, it's a bug\n    return bytes(\"Acknowledgement: Data received\", 'utf-8')\n\n# Run the main coroutine\nasyncio.run(main())\n",
-    "output": "Sending data...\nData sent: bytearray(b'Hello, World!')\nResponse received: b'Acknowledgement: Data received'",
+    "output": "Sending data...\nData sent: bytearray(b'Hello, World!')\nTraceback (most recent call last):\n  File \"<stdin>\", line 25, in <module>\n  File \"/usr/lib/python3.7/asyncio/runners.py\", line 43, in run\n    return loop",
     "tags": [
         "asyncio",
         "bytearray",

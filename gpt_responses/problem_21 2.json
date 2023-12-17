@@ -1,9 +1,0 @@
-{
-    "id": "problem_21",
-    "code": "\ndef fibonacci(n):\n    # A function to return the nth Fibonacci number\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef pretty_print_fibonacci(n):\n    # Print Fibonacci numbers in a pretty format\n    for i in range(n):\n        print(f\"Fibonacci number {i} is {fibonacci(i)}\")\n\ndef idiomatic_python_example():\n    # Demonstrates idiomatic Python by using list comprehensions\n    squares = [x**2 for x in range(10)]\n    print(\"Squares of numbers from 0 to 9:\", squares)\n\n# Main function to demonstrate the functionality\nif __name__ == \"__main__\":\n    pretty_print_fibonacci(10)\n    idiomatic_python_example()\n    \n    # Introducing an error: incorrect variable name\n    print(f\"The 10th Fibonacci number is: {fibonaci(10)}\")\n",
-    "output": "Fibonacci number 0 is 0\nFibonacci number 1 is 1\nFibonacci number 2 is 1\nFibonacci number 3 is 2\nFibonacci number 4 is 3\nFibonacci number 5 is 5\n",
-    "tags": [
-        "IdiomaticPython",
-        "Easy"
-    ]
-}

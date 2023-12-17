@@ -1,7 +1,7 @@
 {
     "id": "problem_3",
     "code": "\ndef manipulate_bytearray(data):\n    # Convert string to bytearray\n    byte_data = bytearray(data, 'utf-8')\n\n    # Perform a simple transformation on the bytearray\n    for i in range(len(byte_data)):\n        byte_data[i] = byte_data[i] ^ 0x41  # XOR with 65 (ASCII code for 'A')\n\n    return byte_data\n\ndef reverse_transformation(byte_data):\n    # Reverse the transformation on the bytearray\n    for i in range(len(byte_data)):\n        byte_data[i] = byte_byte[i] ^ 0x41  # Intentional error: 'byte_byte' should be 'byte_data'\n\n    return byte_data\n\n# Main program\nif __name__ == \"__main__\":\n    original_data = \"Hello, World!\"\n    print(\"Original data:\", original_data)\n\n    transformed_data = manipulate_bytearray(original_data)\n    print(\"Transformed data:\", transformed_data)\n\n    recovered_data = reverse_transformation(transformed_data).decode('utf-8')\n    print(\"Recovered data:\", recovered_data)\n",
-    "output": "Original data: Hello, World!\nTransformed data: bytearray(b'\\x11\\x04\\x0f\\x0f\\x0c\\x1c\\x0e\\x0f\\x0c\\x1d\\x1d\\x0a\\x0f')\nTraceback (most recent call last):\n",
+    "output": "Original data: Hello, World!\nTransformed data: bytearray(b'Q\\xeb\\xeb\\xfa\\xfb\\x9eO\\xfa\\xeb\\xeb\\xfb\\x9c\\x9f')\nTraceback (most recent call last):\n  File \"<stdin>\", line 23, in",
     "tags": [
         "bytearray",
         "Easy"

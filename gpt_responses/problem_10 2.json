@@ -1,9 +1,0 @@
-{
-    "id": "problem_10",
-    "code": "\nfrom collections import Counter\n\ndef count_elements(sequence):\n    # This function counts the occurrences of elements in a sequence\n    element_counter = Counter(sequence)\n    return element_counter\n\ndef main():\n    # Example usage of the count_elements function\n    fruits = ['apple', 'banana', 'cherry', 'apple', 'cherry', 'cherry']\n    fruit_count = count_elements(fruits)\n    \n    # Print the count of each fruit\n    for fruit, count in fruit_count.items():\n        print(f\"The fruit {fruit} appears {count} times.\")\n\n    # Let's add a twist and count letters in a word\n    word = 'pineapple'\n    letter_count = count_elements(word)\n    \n    # Print the count of each letter\n    for letter, count in letter_count.items():\n        print(f\"The letter {letter} appears {count} times.\")\n\n    # Introduce a deliberate error: trying to count elements of a non-iterable (int)\n    number = 12345\n    number_count = count_elements(number)\n\nif __name__ == \"__main__\":\n    main()\n",
-    "output": "The fruit apple appears 2 times.\nThe fruit banana appears 1 times.\nThe fruit cherry appears 3 times.\nThe letter p appears 3 times.\nThe letter i appears 1 times.\nThe letter n appears 1 times.\nThe letter e appears 2 times.\nThe letter a appears",
-    "tags": [
-        "Counter",
-        "Easy"
-    ]
-}

@@ -1,2 +1,0 @@
-Common elements: {5}
-All subsets: True

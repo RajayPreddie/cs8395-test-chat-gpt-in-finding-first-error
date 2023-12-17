@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "<string>", line 20, in <module>
-  File "<string>", line 9, in reflect_methods
-TypeError: __class__ must be set to a class, not 'function' object

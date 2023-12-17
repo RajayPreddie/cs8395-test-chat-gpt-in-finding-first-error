@@ -1,9 +1,0 @@
-{
-    "id": "problem_41",
-    "code": "\nimport os\nimport sys\nimport venv\n\ndef create_virtual_environment(directory):\n    \"\"\"\n    This function creates a virtual environment in the specified directory.\n    \"\"\"\n    if not os.path.exists(directory):\n        os.makedirs(directory)\n    venv.create(directory, with_pip=True)\n    print(f\"Virtual environment created at {directory}\")\n\ndef activate_virtual_environment(directory):\n    \"\"\"\n    This function activates the virtual environment in the specified directory.\n    \"\"\"\n    if sys.platform == 'win32':\n        activate_script = os.path.join(directory, 'Scripts', 'activate')\n    else:\n        activate_script = os.path.join(directory, 'bin', 'activate')\n\n    # The error is here: 'activate' is a shell command and cannot be run like this in Python.\n    # However, the code will not cause an infinite loop or recursion.\n    os.system(activate_script)\n    print(f\"Virtual environment activated at {directory}\")\n\ndef install_package(package_name, directory):\n    \"\"\"\n    This function installs a package in the specified virtual environment.\n    \"\"\"\n    activate_virtual_environment(directory)\n    os.system(f\"{sys.executable} -m pip install {package_name}\")\n\n# Example usage\nenv_directory = 'my_virtualenv'\ncreate_virtual_environment(env_directory)\ninstall_package('requests', env_directory)\n",
-    "output": "Virtual environment created at my_virtualenv\n/bin/sh: my_virtualenv/bin/activate: No such file or directory\nVirtual environment activated at my_virtualenv\n/bin/sh: /usr/bin/python3 -m pip install requests: No such file or directory",
-    "tags": [
-        "VirtualEnvironment",
-        "Easy"
-    ]
-}

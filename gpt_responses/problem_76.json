@@ -1,7 +1,7 @@
 {
     "id": "problem_76",
     "code": "\ndef manage_playlist(playlist):\n    \"\"\"\n    This function takes a playlist dictionary where the key is the song name\n    and the value is the artist. It will remove the last added song and return\n    the updated playlist.\n    \"\"\"\n    # Remove the last added song from the playlist\n    try:\n        playlist.popitem()\n    except KeyError:\n        print(\"The playlist is already empty!\")\n\n    return playlist\n\n# Initialize a playlist dictionary\nmy_playlist = {\n    \"Shape of You\": \"Ed Sheeran\",\n    \"Blinding Lights\": \"The Weeknd\",\n    \"Levitating\": \"Dua Lipa\",\n    \"Watermelon Sugar\": \"Harry Styles\"\n}\n\n# Manage the playlist by removing the last added song\nupdated_playlist = manage_playlist(my_playlist)\nprint(\"Updated Playlist:\", updated_playlist)\n\n# Intentionally creating an error: using pop instead of popitem\n# This will cause a TypeError because pop expects at least one argument\nmy_playlist.pop()\n",
-    "output": "Updated Playlist: {'Shape of You': 'Ed Sheeran', 'Blinding Lights': 'The Weeknd', 'Levitating': 'Dua Lipa'}\nTraceback (most recent call last):\n  File \"<stdin>\", line 27, in <module>\nTypeError: pop expected",
+    "output": "Updated Playlist: {'Shape of You': 'Ed Sheeran', 'Blinding Lights': 'The Weeknd', 'Levitating': 'Dua Lipa'}\nTraceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nTypeError: pop expected",
     "tags": [
         "pop",
         "popitem",

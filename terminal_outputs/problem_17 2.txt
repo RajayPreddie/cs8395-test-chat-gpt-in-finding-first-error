@@ -1,9 +1,0 @@
-apple_core
-banana_peel
-used_napkin
-empty_bottle
-apple_core
-banana_peel
-empty_bottle
-Garbage collected successfully.
-Item not found in garbage.

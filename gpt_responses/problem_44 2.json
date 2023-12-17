@@ -1,9 +1,0 @@
-{
-    "id": "problem_44",
-    "code": "\ndef capitalize_words(text):\n    # This function takes a string and capitalizes each word in the string\n    words = text.split(' ')\n    capitalized_words = [word.capitalize() for word in words]\n    return ' '.join(capitalized_words)\n\ndef main():\n    # Main function to demonstrate the capitalize_words function\n    sample_text = \"hello world! this is an example text.\"\n    capitalized_text = capitalize_words(sample_text)\n    print(capitalized_text)\n\n# Call the main function to run the program\nmain()\n",
-    "output": "Hello World! This Is An Example Text.",
-    "tags": [
-        "capitalize",
-        "Easy"
-    ]
-}

@@ -1,7 +1,7 @@
 {
     "id": "problem_57",
     "code": "\n# Program to format a dictionary using fromkeys method\n\n# Function to create a dictionary from a list of keys with a common value\ndef create_dict_from_keys(keys_list, common_value):\n    return dict.fromkeys(keys_list, common_value)\n\n# Function to format the dictionary into a string representation\ndef format_dict(dictionary):\n    formatted_string = \"{\"\n    for key, value in dictionary.items():\n        formatted_string += f\"'{key}': '{value}', \"\n    formatted_string = formatted_string.rstrip(', ')\n    formatted_string += \"}\"\n    return formatted_string\n\n# Main execution\nif __name__ == \"__main__\":\n    keys = ['id', 'name', 'email']\n    common_value = \"Not Provided\"\n    \n    # Create a dictionary with keys and a common value\n    user_info = create_dict_from_keys(keys, common_value)\n    \n    # Format the dictionary into a string representation\n    formatted_user_info = format_dict(user_info)\n    \n    # Print the formatted dictionary\n    print(formatted_user_info)\n    \n    # Introduce a subtle error: misspelling a variable name\n    print(formated_user_info)\n",
-    "output": "{'id': 'Not Provided', 'name': 'Not Provided', 'email': 'Not Provided'}\nTraceback (most recent call last):\n  File \"<stdin>\", line 28, in <module>\nNameError: name 'formated_user_info' is not defined",
+    "output": "{'id': 'Not Provided', 'name': 'Not Provided', 'email': 'Not Provided'}\nTraceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nNameError: name 'formated_user_info' is not defined",
     "tags": [
         "format",
         "fromkeys",

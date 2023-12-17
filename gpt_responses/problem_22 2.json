@@ -1,9 +1,0 @@
-{
-    "id": "problem_22",
-    "code": "\ndef analyze_object(obj):\n    # Display the attributes and methods of an object\n    attributes = dir(obj)\n    print(f\"The object has the following attributes and methods: {attributes}\")\n\n    # Check if the object is callable\n    if callable(obj):\n        print(f\"The object {obj} is callable.\")\n    else:\n        print(f\"The object {obj} is not callable.\")\n\n    # Count the number of public methods\n    public_methods = [method for method in attributes if callable(getattr(obj, method)) and not method.startswith('_')]\n    print(f\"The object has {len(public_methods)} public methods.\")\n\nclass IntrospectionDemo:\n    def __init__(self, name):\n        self.name = name\n\n    def greet(self):\n        print(f\"Hello, my name is {self.name}.\")\n\n# Create an instance of IntrospectionDemo\ndemo_object = IntrospectionDemo(\"Alice\")\n\n# Analyze the demo_object using our function\nanalyze_object(demo_object)\n\n# Introduce an error by trying to call a non-existing method\ndemo_object.fly()\n",
-    "output": "The object has the following attributes and methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__",
-    "tags": [
-        "Introspection",
-        "Easy"
-    ]
-}

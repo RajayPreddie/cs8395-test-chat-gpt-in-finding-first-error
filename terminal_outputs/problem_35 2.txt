@@ -1,2 +1,0 @@
-Serialized user: {"name": "John Doe", "age": 30}
-Deserialized user: John Doe 30

@@ -1,7 +1,7 @@
 {
     "id": "problem_61",
     "code": "\ndef list_intersection(list1, list2):\n    # This function finds the intersection of two lists.\n    intersection = []\n    for element in list1:\n        if element in list2:\n            intersection.append(element)\n    return intersection\n\ndef insert_element_at_position(lst, element, position):\n    # This function inserts an element at a specified position in a list.\n    lst.insert(position, element)\n    return lst\n\n# Example lists\nlist_a = [1, 2, 3, 4, 5]\nlist_b = [4, 5, 6, 7, 8]\n\n# Find the intersection of two lists\ncommon_elements = list_intersection(list_a, list_b)\nprint(\"Common elements:\", common_elements)\n\n# Insert an element into list_a at position 2\nmodified_list = insert_element_at_position(list_a, 'apple', 2)\nprint(\"Modified List:\", modified_list)\n\n# Intentionally introduce an error: incorrect variable name\n# Attempt to print a non-existent variable 'modified_lst'\nprint(\"Modified List with Error:\", modified_lst)\n",
-    "output": "Common elements: [4, 5]\nModified List: [1, 2, 'apple', 3, 4, 5]\nTraceback (most recent call last):\n  File \"<stdin>\", line 25, in <module>\nNameError: name 'modified_lst' is",
+    "output": "Common elements: [4, 5]\nModified List: [1, 2, 'apple', 3, 4, 5]\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nNameError: name 'modified_lst' is",
     "tags": [
         "insert",
         "intersection",

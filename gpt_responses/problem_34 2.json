@@ -1,9 +1,0 @@
-{
-    "id": "problem_34",
-    "code": "\nclass MirrorObject:\n    def __init__(self, original):\n        self.original = original\n\n    def reflect_methods(self):\n        methods = [method for method in dir(self.original) if callable(getattr(self.original, method))]\n        for method in methods:\n            setattr(self, method, self._create_reflection(method))\n\n    def _create_reflection(self, method_name):\n        def reflected_method(*args, **kwargs):\n            return getattr(self.original, method_name)(*args, **kwargs)\n        return reflected_method\n\n# Example usage of MirrorObject\nif __name__ == \"__main__\":\n    original_list = [1, 2, 3, 4]\n    mirrored_list = MirrorObject(original_list)\n    mirrored_list.reflect_methods()\n\n    # Intentionally introduce an error: misspelled method name\n    print(mirrored_list.appned(5))  # Should be 'append', not 'appned'\n    print(mirrored_list.original)\n",
-    "output": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAttributeError: 'MirrorObject' object has no attribute 'appned'",
-    "tags": [
-        "Reflection",
-        "Easy"
-    ]
-}

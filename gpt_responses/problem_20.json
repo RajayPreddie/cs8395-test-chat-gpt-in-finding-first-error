@@ -1,7 +1,7 @@
 {
     "id": "problem_20",
     "code": "\nimport heapq\n\ndef find_largest_elements(sequence, n):\n    # This function returns the n largest elements in the sequence\n    return heapq.nlargest(n, sequence)\n\ndef main():\n    # Generate a list of numbers\n    numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]\n    \n    # Get the top 3 largest numbers from the list\n    top_numbers = find_largest_elements(numbers, 3)\n    \n    # Print the top 3 largest numbers\n    print(\"The top 3 largest numbers are:\", top_numbers)\n    \n    # Intentionally added error: incorrect function name\n    # This should be heapq.nlargest but is misspelled as heapq.largest\n    top_numbers_with_error = heapq.largest(3, numbers)\n    print(\"The top 3 largest numbers with error are:\", top_numbers_with_error)\n\nif __name__ == \"__main__\":\n    main()\n",
-    "output": "The top 3 largest numbers are: [9, 6, 5]\nTraceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\n  File \"<stdin>\", line 18, in main\nAttributeError: module 'heapq' has no",
+    "output": "The top 3 largest numbers are: [9, 6, 5]\nTraceback (most recent call last):\n  File \"<stdin>\", line 23, in <module>\n  File \"<stdin>\", line 19, in main\nAttributeError: module 'heapq' has no",
     "tags": [
         "heapq",
         "Easy"

@@ -1,1 +1,0 @@
-Bytearray contents: bytearray(b'dnx\x82\x8c')

@@ -1,1 +1,0 @@
-The top 3 largest numbers are: [9, 6, 5]

@@ -1,6 +1,0 @@
-Memory address: bytearray(b'\x00\x01\x02\x03\x04')
-Element size in bytes: 1
-Number of elements: 5
-Length of memoryview: 5
-First element value: 0
-Provided object is not a bytes-like object.

@@ -1,9 +1,0 @@
-{
-    "id": "problem_8",
-    "code": "\nimport os\nfrom contextlib import contextmanager\n\n# Custom context manager for opening and writing to a file\n@contextmanager\ndef file_writer(file_name, mode):\n    try:\n        # Open the file\n        file = open(file_name, mode)\n        yield file\n    finally:\n        # Close the file\n        file.close()\n\n# Function to write data to a file using our custom context manager\ndef write_data_to_file(file_path, data):\n    with file_writer(file_path, 'w') as file:\n        file.write(data)\n\n# Main function to execute the program\ndef main():\n    file_path = 'output.txt'\n    data = 'This is some text that will be written to the file.'\n    write_data_to_file(file_path, data)\n\n    # Read the data from the file to confirm it was written\n    with open(file_path, 'r') as file:\n        content = file.read()\n        print(\"Content of the file:\", content)\n\n# Call the main function\nmain()\n",
-    "output": "Content of the file: This is some text that will be written to the file.",
-    "tags": [
-        "ContextManager",
-        "Easy"
-    ]
-}

@@ -1,9 +1,0 @@
-{
-    "id": "problem_6",
-    "code": "\ndef calculate_square_values(numbers):\n    # This function takes a list of numbers and returns a list of their squares\n    squares = [number ** 2 for number in numbers]\n    return squares\n\ndef find_unique_words(text):\n    # This function finds unique words in a given text\n    words = text.split()\n    unique_words = {word for word in words}\n    return unique_words\n\ndef main():\n    # Calculate squares of numbers from 1 to 5\n    numbers = range(1, 6)\n    square_values = calculate_square_values(numbers)\n    print(\"Square values:\", square_values)\n\n    # Find unique words in a sample text\n    sample_text = \"Python is great for list comprehension! Comprehension is powerful.\"\n    unique_words_set = find_unique_words(sample_text)\n    print(\"Unique words:\", unique_words_set)\n\n    # Introduce an error in the following line\n    # The error is subtle: trying to concatenate a set to a string, which is not allowed\n    print(\"Unique words as a string: \" + unique_words_set)\n\nif __name__ == \"__main__\":\n    main()\n",
-    "output": "Square values: [1, 4, 9, 16, 25]\nUnique words: {'is', 'for', 'Python', 'Comprehension', 'great', 'powerful.', 'comprehension!', 'list'}\nTraceback (most recent call last):\n  File",
-    "tags": [
-        "Comprehension",
-        "Easy"
-    ]
-}

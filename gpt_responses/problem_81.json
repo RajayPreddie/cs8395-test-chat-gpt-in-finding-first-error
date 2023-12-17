@@ -1,7 +1,7 @@
 {
     "id": "problem_81",
     "code": "\nimport requests\n\ndef remove_html_tags(text):\n    \"\"\"Removes HTML tags from the given text.\"\"\"\n    import re\n    clean = re.compile('<.*?>')\n    return re.sub(clean, '', text)\n\ndef replace_keyword(text, keyword, replacement):\n    \"\"\"Replaces the keyword in the text with the replacement.\"\"\"\n    return text.replace(keyword, replacement)\n\ndef fetch_web_page(url):\n    \"\"\"Fetches the given URL and returns the raw HTML content.\"\"\"\n    response = requests.get(url)\n    return response.text\n\ndef process_web_page(url, keyword, replacement):\n    \"\"\"Fetches a web page, removes HTML tags, and replaces a keyword.\"\"\"\n    html_content = fetch_web_page(url)\n    text_content = remove_html_tags(html_content)\n    updated_content = replace_keyword(text_content, keyword, replacement)\n    return updated_content\n\n# Example usage:\n# Let's say we want to fetch a web page, remove its HTML tags,\n# and replace all occurrences of the word 'Python' with 'Java'\nurl_to_process = 'http://example.com'\nprocessed_content = process_web_page(url_to_process, 'Python', 'Java')\nprint(processed_content)\n",
-    "output": "The output cannot be generated as the code execution depends on a live web page content which is not possible to fetch in the current simulated environment.",
+    "output": "The code provided cannot be run as the command-line interface does not support network requests. However, if it were to be run, it would fetch the HTML content from the specified URL (http://example.com in this case), remove all HTML tags from the content, and replace all occurrences of the word",
     "tags": [
         "remove",
         "replace",

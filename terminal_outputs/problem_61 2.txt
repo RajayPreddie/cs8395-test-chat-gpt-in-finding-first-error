@@ -1,2 +1,0 @@
-Common elements: [4, 5]
-Modified List: [1, 2, 'apple', 3, 4, 5]
