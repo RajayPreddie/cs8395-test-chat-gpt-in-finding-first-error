@@ -94,7 +94,8 @@ Outputs are stored in:
 - `gpt_responses`: JSON files each containing a ChatGPT response acting as a command-line interface.
 - `json_problem_scores`: JSON files containing scores for each problem.
 - `terminal_outputs`: Text files with terminal outputs when running the code.
-
+## Important Note
+The current results are not the original results. The original results are on the [improve_code](https://github.com/RajayPreddie/cs8395-test-chat-gpt-in-finding-first-error/tree/improve_code) branch.
 ## Acknowledgement
 The inspiration for the methodology diffculty levels comes from one of the research 
 presentations I viewed in CS8395.
